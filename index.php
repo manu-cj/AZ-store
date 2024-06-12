@@ -41,13 +41,13 @@
       </div>
     </main>
     <?php
-
+    session_start();
     $c = $_GET['c'];
     $a = $_GET['a'];
    
     function getPath($page) {
     
-      require __DIR__ . "/pages/".$page.".php";
+      require __DIR__ . "/".$page.".php";
   }
 
   if (!isset($c)) {
@@ -55,19 +55,23 @@
   }
     switch ($c) {
       case 'home':
-        getPath('home');
+        getPath('pages/home');
         break;
       case 'cart':
-        getPath('cart');
+        getPath('pages/cart');
         break;
       case 'products':
-        getPath('products');
+        getPath('pages/products');
+        break;
+      case 'add-to-cart':
+        getPath('controller/addToCart');
         break;
       // pour ajouter une page rajouter un case en suivant les exemples précèdents
       default:
         getPath('404');
         break;
     }
+    
     ?>
    
 </body>
