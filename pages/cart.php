@@ -11,17 +11,17 @@
 <body>
 
 <header >
-        <p><a href="../index.php">AZ[store]</a></p>
-        <nav>
-            <a href="../index.php">Home</a>
-            <a href="#">About</a>
-            <a href="#">Products</a>
-            <a href="#">Contact</a>
-        </nav>
+<nav>
+ 
+    <a href="../index.php">AZ[store]</a>
 
-        <div>
+
+        <a href="../index.php">Home</a>
+        <a href="#">Features</a>
+        <a href="./pages/cart.php">cart</a>
+        <a>Disabled</a>
             <img src="../assets/images/shopping-cart.svg" alt="Cart"><a href="./cart.php" alt="shopping cart"><span>Login</span></a>
-        </div>
+    
     </header>
 
     <h1>Shopping Cart</h1>
@@ -258,7 +258,7 @@
     </table>
     <div>
         <a href="../index.php" alt="homepage"><button>Back to shopping</button></a>
-        <a href="./checkout.php" alt="checkout"><button>Purchase</button></a>
+        <a href="../checkout.php" alt="checkout"><button>Purchase</button></a>
     </div>
     <footer>
         <nav>
