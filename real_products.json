@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "product": "Nike Air Max 270",
+    "price": 140,
+    "image_url": "/assets/img/nike-air-max-270.jpeg"
+  },
+  {
+    "id": 2,
+    "product": "Adidas Ultraboost 21",
+    "price": 180,
+    "image_url": "/assets/img/adidas-ultraboost-21.jpeg"
+  },
+  {
+    "id": 3,
+    "product": "Puma RS-X3",
+    "price": 110,
+    "image_url": "/assets/img/puma-rs-x3.jpeg"
+  },
+  {
+    "id": 4,
+    "product": "New Balance 990v5",
+    "price": 175,
+    "image_url": "/assets/img/new-balance-990v5.jpeg"
+  },
+  {
+    "id": 5,
+    "product": "Reebok Club C 85",
+    "price": 85,
+    "image_url": "/assets/img/reebok-club-c-85.jpeg"
+  },
+  {
+    "id": 6,
+    "product": "Converse Chuck Taylor",
+    "price": 55,
+    "image_url": "/assets/img/converse-chuck-taylor.jpeg"
+  },
+  {
+    "id": 7,
+    "product": "Vans Old Skool",
+    "price": 60,
+    "image_url": "/assets/img/vans-old-skool.jpeg"
+  },
+  {
+    "id": 8,
+    "product": "Asics Gel-Kayano 27",
+    "price": 160,
+    "image_url": "/assets/img/asics-gel-kayano-27.jpeg"
+  },
+  {
+    "id": 9,
+    "product": "Under Armour HOVR Phantom",
+    "price": 140,
+    "image_url": "/assets/img/under-armour-hovr-phantom.jpeg"
+  },
+  {
+    "id": 10,
+    "product": "Jordan Air Jordan 1",
+    "price": 170,
+    "image_url": "/assets/img/jordan-air-jordan-1.jpeg"
+  },
+  {
+    "id": 11,
+    "product": "Brooks Ghost 13",
+    "price": 130,
+    "image_url": "/assets/img/brooks-ghost-13.jpeg"
+  },
+  {
+    "id": 12,
+    "product": "Saucony Endorphin Speed",
+    "price": 160,
+    "image_url": "/assets/img/saucony-endorphin-speed.jpeg"
+  },
+  {
+    "id": 13,
+    "product": "Hoka One One Clifton 7",
+    "price": 130,
+    "image_url": "/assets/img/hoka-one-one-clifton-7.jpeg"
+  },
+  {
+    "id": 14,
+    "product": "Mizuno Wave Rider 24",
+    "price": 125,
+    "image_url": "/assets/img/mizuno-wave-rider-24.jpeg"
+  },
+  {
+    "id": 15,
+    "product": "Skechers GOrun Razor 3",
+    "price": 120,
+    "image_url": "/assets/img/skechers-gorun-razor-3.jpeg"
+  },
+  {
+    "id": 16,
+    "product": "Altra Torin 4.5 Plush",
+    "price": 140,
+    "image_url": "/assets/img/altra-torin-4-5-plush.jpeg"
+  },
+  {
+    "id": 17,
+    "product": "Salomon Speedcross 5",
+    "price": 130,
+    "image_url": "/assets/img/salomon-speedcross-5.jpeg"
+  },
+  {
+    "id": 18,
+    "product": "Merrell Moab 2 Ventilator",
+    "price": 100,
+    "image_url": "/assets/img/merrell-moab-2-ventilator.jpeg"
+  },
+  {
+    "id": 19,
+    "product": "On Cloud X",
+    "price": 140,
+    "image_url": "/assets/img/on-cloud-x.jpeg"
+  },
+  {
+    "id": 20,
+    "product": "Topo Athletic Fli-Lyte 3",
+    "price": 120,
+    "image_url": "/assets/img/topo-athletic-fli-lyte-3.jpeg"
+  }
+]
