@@ -1,1 +1,11 @@
-<h1>Bienvenue sur la page d'acceuil</h1>
+<main>
+      <div class="shoe">
+        SHOE THE
+        <br>
+        RIGHT ONE.
+        <button class="btn btn-primary">See our store</button>
+      </div>
+      <div class="nike">
+        NIKE
+      </div>
+    </main>
