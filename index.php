@@ -1,5 +1,3 @@
-<?php session_start(); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,24 +17,40 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">About</a>
-        <a class="nav-link" href="#">Product</a>
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="?c=cart">cart</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         <a class="nav-link disabled" aria-disabled="true">Login</a>
       </div>
     </div>
   </div>
 </nav>
-    <main>
-      <div class="shoe">
-        SHOE THE
-        <br>
-        RIGHT ONE.
-        <button class="btn btn-primary">See our store</button>
-      </div>
-      <div class="nike">
-        NIKE
-      </div>
-    </main>
+    <?php
+
+    $c = $_GET['c'];
+    $a = $_GET['a'];
+   
+    function getPath($page) {
+    
+      require __DIR__ . "/pages/".$page.".php";
+  }
+
+  if (!isset($c)) {
+    header("LOCATION: ?c=home");
+  }
+    switch ($c) {
+      case 'home':
+        getPath('home');
+        break;
+      case 'cart':
+        getPath('cart');
+        break;
+      // pour ajouter une page rajouter un case en suivant les exemples précèdents
+      default:
+        getPath('404');
+        break;
+    }
+    ?>
+   
 </body>
 </html>
