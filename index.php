@@ -17,12 +17,37 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
         <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="?c=cart">cart</a>
         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
       </div>
     </div>
   </div>
 </nav>
+    <?php
+
+    $c = $_GET['c'];
+    $a = $_GET['a'];
+   
+    function getPath($page) {
     
+      require __DIR__ . "/pages/".$page.".php";
+  }
+
+  if (!isset($c)) {
+    header("LOCATION: ?c=home");
+  }
+    switch ($c) {
+      case 'home':
+        getPath('home');
+        break;
+      case 'cart':
+        getPath('cart');
+        break;
+      // pour ajouter une page rajouter un case en suivant les exemples précèdents
+      default:
+        getPath('404');
+        break;
+    }
+    ?>
 </body>
 </html>
