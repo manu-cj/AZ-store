@@ -5,22 +5,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/cart.css">
+    <link rel="stylesheet" href="../assets/css/cart.css">
     <title>Shopping Cart</title>
 </head>
 <body>
 
 <header >
-        <p><a href="./index.php">AZ[store]</a></p>
+        <p><a href="../index.php">AZ[store]</a></p>
         <nav>
-            <a href="./index.php">Home</a>
+            <a href="../index.php">Home</a>
             <a href="#">About</a>
             <a href="#">Products</a>
             <a href="#">Contact</a>
         </nav>
 
         <div>
-            <img src="./assets/images/shopping-cart.svg" alt="Cart"><a href="./cart.php" alt="shopping cart"><span>Login</span></a>
+            <img src="../assets/images/shopping-cart.svg" alt="Cart"><a href="./cart.php" alt="shopping cart"><span>Login</span></a>
         </div>
     </header>
 
@@ -168,7 +168,7 @@
         $quantity = isset($_POST['quantity']) && !empty($_POST['quantity']) ? $_POST['quantity'] : 1;
         $key = array_search($item, $articles);
         if (!isset($_SESSION['cart'][$key])) {
-            $_SESSION['cart'][$key] = array("quantity" => $quantity, "price" => $item["price"], "product" => $item["product"]);
+            $_SESSION['cart'][$key] = array("quantity" => $quantity, "price" => $item["price"], "product" => $item[""]);
         } else {
             $_SESSION['cart'][$key]["quantity"] += $quantity;
         }
@@ -257,7 +257,7 @@
         </tr>
     </table>
     <div>
-        <a href="./index.php" alt="homepage"><button>Back to shopping</button></a>
+        <a href="../index.php" alt="homepage"><button>Back to shopping</button></a>
         <a href="./checkout.php" alt="checkout"><button>Purchase</button></a>
     </div>
     <footer>
