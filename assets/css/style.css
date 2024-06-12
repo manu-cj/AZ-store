@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.articles-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 45px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=style.css.map */
