@@ -1,14 +1,14 @@
 <?php
-$valide = false;
+$valid = false;
 $error = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $valide = true;
+    $valid = true;
 
     $country = filter_input(INPUT_POST, 'country', FILTER_SANITIZE_STRING);
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
     $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
-    $adresse = filter_input(INPUT_POST, 'adresse', FILTER_SANITIZE_STRING);
+    $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
     $gender = filter_input(INPUT_POST, 'gender', FILTER_SANITIZE_STRING);
     $phoneNumber = filter_input(INPUT_POST, 'phoneNumber', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -16,13 +16,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $checkCondition = filter_input(INPUT_POST, 'checkCondition', FILTER_SANITIZE_STRING);
     $checkPub = filter_input(INPUT_POST, 'checkPub', FILTER_SANITIZE_STRING);
     
-    if(empty($country)){$valide = false;}
-    if(empty($name)){$valide = false;}
-    if(empty($lastname)){$valide = false;}
-    if(empty($adresse)){$valide = false;}
-    if(empty($email)){$valide = false;}
-    if($checkCondition != "Yes"){$valide = false;}
-    if(!$valide){$error = true;}
+    if(empty($country)){$valid = false;}
+    if(empty($name)){$valid = false;}
+    if(empty($lastname)){$valid = false;}
+    if(empty($address)){$valid = false;}
+    if(empty($email)){$valid = false;}
+    if($checkCondition != "Yes"){$valid = false;}
+    if(!$valid){$error = true;}
 }
 
 ?>
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraison</title>
+    <title>Delivery</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/shippingAddress.css">
 </head>
@@ -40,133 +40,133 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <header>
     <div class="sep-raw">
-        <p class="-true"><span class="caseNumberTrue">1</span> EXPÉDITION</p>
+        <p class="-true"><span class="caseNumberTrue">1</span> SHIPPING</p>
         <?php
-        if(!$valide){
+        if(!$valid){
         ?>
-        <p class="-false"><span class="caseNumberFalse">2</span> PAIEMENT</p>
+        <p class="-false"><span class="caseNumberFalse">2</span> PAYMENT</p>
         <?php
         }else{
         ?>
-        <p class="-true"><span class="caseNumberTrue">2</span> PAIEMENT</p>
+        <p class="-true"><span class="caseNumberTrue">2</span> PAYMENT</p>
         <?php
         }
         ?>
     </div>
-    <div><p>BESOIN D'AIDE ? NUMÉRO D'APPEL GRATUIT : 0800 81843 📞 PAIEMENT SÉCURISÉ 🔒</p></div>
+    <div><p>NEED HELP? TOLL-FREE NUMBER: 0800 81843 📞 SECURE PAYMENT 🔒</p></div>
     </header>
     <main>
         <?php
-        if(!$valide){
+        if(!$valid){
         ?>
-        <div class="form-adresse">
+        <div class="form-address">
         <form id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
             <?php 
 
                     if($error){
-                    echo "<h2>ERREUR</h2>";
+                    echo "<h2>ERROR</h2>";
                     echo "<hr>";
                     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                    echo "<p class=\"error\">Email non valide</p>";
+                    echo "<p class=\"error\">Invalid email</p>";
                     }
-                    if(empty($country)){echo "<p class=\"error\">Champs du pays vide !</p>";}
-                    if(empty($name)){echo "<p class=\"error\">Champs du nom vide !</p>";}
-                    if(empty($lastname)){echo "<p class=\"error\">Champs du prénom vide !</p>";}
-                    if(empty($adresse)){echo "<p class=\"error\">Champs de l'adresse vide !</p>";}
-                    if(empty($email)){echo "<p class=\"error\">Champs du mail vide !</p>";}
-                    if($checkCondition != "Yes"){echo "<p class=\"error\">Veillez accepter les CGU.</p>";}
+                    if(empty($country)){echo "<p class=\"error\">Country field is empty!</p>";}
+                    if(empty($name)){echo "<p class=\"error\">Name field is empty!</p>";}
+                    if(empty($lastname)){echo "<p class=\"error\">First name field is empty!</p>";}
+                    if(empty($address)){echo "<p class=\"error\">Address field is empty!</p>";}
+                    if(empty($email)){echo "<p class=\"error\">Email field is empty!</p>";}
+                    if($checkCondition != "Yes"){echo "<p class=\"error\">Please accept the T&Cs.</p>";}
                 } 
             ?>
 
 
             
-            <h2>DÉTAILS</h2>
+            <h2>DETAILS</h2>
             <hr>
             <div class="input">
-                <label>Pays:</label>
-                <input class="inputfield" type="text" id="country" name="country" placeholder="Votre pays" required>
-                <label>Nom:</label>
-                <input class="inputfield" type="text" id="name" name="name" placeholder="Votre nom" required>
-                <label>Prénom:</label>
-                <input class="inputfield" type="text" id="lastname" name="lastname" placeholder="Votre prénom" required>
-                <label>adresse:</label>
-                <input class="inputfield" type="text" id="adresse" name="adresse" placeholder="Votre adresse" required>
-                <label>Genre:</label>
+                <label>Country:</label>
+                <input class="inputfield" type="text" id="country" name="country" placeholder="Your country" required>
+                <label>Name:</label>
+                <input class="inputfield" type="text" id="name" name="name" placeholder="Your name" required>
+                <label>First name:</label>
+                <input class="inputfield" type="text" id="lastname" name="lastname" placeholder="Your first name" required>
+                <label>Address:</label>
+                <input class="inputfield" type="text" id="address" name="address" placeholder="Your address" required>
+                <label>Gender:</label>
                 <select class="inputfield" id="gender" name="gender" required>
-                    <option value="male">Homme</option>
-                    <option value="female">Femme</option>
-                    <option value="HDC">Hélicoptère de combat</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="HDC">Hélicopter de combat</option>
                 </select>
-                <label>Telephone:</label>
-                <input class="inputfield" type="text" id="phoneNumber" name="phoneNumber" placeholder="Votre numéro de telephone">
-                <label class="comment">Pour te parler de ta commande</label>
+                <label>Phone:</label>
+                <input class="inputfield" type="text" id="phoneNumber" name="phoneNumber" placeholder="Your phone number">
+                <label class="comment">To talk to you about your order</label>
                 <label>Email:</label>
-                <input class="inputfield" type="email" id="email" name="email" placeholder="Votre email" required>
-                <label class="comment">Pour envoyer tes infos et suivis de commande</label>
+                <input class="inputfield" type="email" id="email" name="email" placeholder="Your email" required>
+                <label class="comment">To send your info and order tracking</label>
             </div>
 
             <h2>Option</h2>
             <hr>
 
             <select class="livraisonSelect" id="gender" name="gender" required>
-                <option value="standard">Livraison standard  [ 2 à 4 jours ouvrés* ]</option>
-                <option value="express">Livraison Express  [ 24-48 heures* ]</option>
+                <option value="standard">Standard delivery  [ 2 to 4 working days* ]</option>
+                <option value="express">Express delivery  [ 24-48 hours* ]</option>
             </select>
 
-            <div class="CGU"><input type="checkbox" name="checkCondition" value="Yes" required> <label class="comment">J'accepte les conditions générales de Vans de VANS et je reconnais avoir lu et compris la Politique de confidentialité de Vans .</label></div>
-            <div class="CGU"><input type="checkbox" name="checkPub" value="Yes"> <label class="comment">Je veux être au courant des offres spéciales, des nouveaux produits et actualités Vans.<br> <span>Je consens au traitement de mes données personnelles à des fins de marketing basé sur le profil, comme décrit dans notre Politique de confidentialité.</span></label></div>
+            <div class="CGU"><input type="checkbox" name="checkCondition" value="Yes" required> <label class="comment">I accept the general conditions of Vans and I acknowledge having read and understood the Privacy Policy of Vans.</label></div>
+            <div class="CGU"><input type="checkbox" name="checkPub" value="Yes"> <label class="comment">I want to be informed about special offers, new products and Vans news.<br> <span>I consent to the processing of my personal data for profile-based marketing purposes, as described in our Privacy Policy.</span></label></div>
 
-            <button type="submit">PAIEMENT</button>
+            <button type="submit">PAYMENT</button>
         </form>
     </div>
     <?php
     }else{
         ?>
-        <div class="form-adresse">
-            <h2>ADRESSE DE FACTURATION</h2>
+        <div class="form-address">
+            <h2>BILLING ADDRESS</h2>
             <hr>
             <?php
-            echo "<p class=\"paiment-text\">$name $lastname</p>";
-            echo "<p class=\"paiment-text\">$adresse</p>";
-            echo "<p class=\"paiment-text\">$country</p>";
+            echo "<p class=\"payment-text\">$name $lastname</p>";
+            echo "<p class=\"payment-text\">$address</p>";
+            echo "<p class=\"payment-text\">$country</p>";
             if(!empty($phoneNumber)){
-            echo "<p class=\"paiment-text\">$phoneNumber</p>";
+            echo "<p class=\"payment-text\">$phoneNumber</p>";
             }
-            echo "<p class=\"paiment-text\">$email</p>";
+            echo "<p class=\"payment-text\">$email</p>";
             ?>
             <br>
             <br>
-            <h2>SELECTIONNEZ VOTRE MODE DE PAIEMENT</h2>
+            <h2>SELECT YOUR PAYMENT METHOD</h2>
             <hr>
             <br>
-            <div class="paiement">
-                <button class="paiement-button">PAYPAL</button>
-                <button class="paiement-button">BANCONTACT</button>
+            <div class="payment">
+                <button class="payment-button">PAYPAL</button>
+                <button class="payment-button">BANCONTACT</button>
             </div>
         </div>
     <?php
     }
     ?>
     <div class="shopCard">
-        <h2>RÉSUMÉ DE LA COMMANDE</h2>
+        <h2>ORDER SUMMARY</h2>
         <hr>
-        <p class="card-article">X ARTICLE DANS VOTRE PANIER</p>
-        <div class="sep"><p class="card-total">Sous-total</p><p class="card-total">€ 95,00</p></div>
-        <div class="sep"><p class="card-livraison">Livraison</p><p class="card-livraison">GRATUITE</p></div>
-        <p class="eco">Tres bien!<br><span class="card-message">En atteignant le seuil d’expédition, vous avez contribué à minimiser l’impact environnemental de votre envoi</span></p>
+        <p class="card-article">X ARTICLE IN YOUR CART</p>
+        <div class="sep"><p class="card-total">Subtotal</p><p class="card-total">€ 95,00</p></div>
+        <div class="sep"><p class="card-delivery">Delivery</p><p class="card-delivery">FREE</p></div>
+        <p class="eco">Very good!<br><span class="card-message">By reaching the shipping threshold, you have helped to minimize the environmental impact of your shipment</span></p>
         <div class="total">
             <div class="sep"><p class="total-total">Total</p><p class="total-total">€ 95,00</p></div>
-            <p class="total-tva">(21% TVA comprise)</p>
+            <p class="total-vat">(21% VAT included)</p>
         </div>
         <?php
-        if($valide){
+        if($valid){
             echo "<br>";
-            echo "<h3>ADRESSE DE LIVRAISON</h3>";
+            echo "<h3>DELIVERY ADDRESS</h3>";
             echo "<hr>";
-            echo "<p class=\"paiment-text\">$name $lastname</p>";
-            echo "<p class=\"paiment-text\">$adresse</p>";
-            echo "<p class=\"paiment-text\">$country</p>";
+            echo "<p class=\"payment-text\">$name $lastname</p>";
+            echo "<p class=\"payment-text\">$address</p>";
+            echo "<p class=\"payment-text\">$country</p>";
         }
         ?>
     </div>
