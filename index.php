@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="?c=products">Product</a>
         <a class="nav-link" href="?c=cart">cart</a>
         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         <a class="nav-link disabled" aria-disabled="true">Login</a>
@@ -44,6 +44,9 @@
         break;
       case 'cart':
         getPath('cart');
+        break;
+      case 'products':
+        getPath('products');
         break;
       // pour ajouter une page rajouter un case en suivant les exemples précèdents
       default:
