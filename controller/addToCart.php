@@ -19,5 +19,5 @@ if (isset($_POST['add-to-cart'])) {
 
   $_SESSION['product-data'][] = $cartProduct;
 
-  header("LOCATION: ?c=products");
+  header("LOCATION: ?c=cart");
 }

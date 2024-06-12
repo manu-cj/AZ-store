@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .articles-container {
@@ -29,33 +30,62 @@ body {
   color: #e2e8f0;
   min-height: 100vh;
   width: 100%;
+  position: relative;
 }
-
-main h1 {
+body main {
+  display: flex;
+  flex-direction: column;
+}
+body main #main-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+body main #cart {
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  right: 0;
+  text-align: center;
+}
+body main #cart table {
+  border: 1px solid #e2e8f0;
+  width: 450px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  min-height: 55vh;
+  background-color: rgba(0, 0, 0, 0.055);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  font-size: small;
+}
+body main #cart table tr {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+body main #cart table tr td form .quantity {
+  width: 50%;
+}
+body main #cart table .table-footer {
+  display: flex;
+  justify-content: space-around;
+}
+body main #cart table .total {
+  display: flex;
+  flex-direction: row;
+}
+body main h1 {
   text-align: center;
   margin-top: 3%;
   text-transform: uppercase;
   margin-bottom: 3%;
 }
-main table {
-  border: 1px solid #e2e8f0;
-  width: 50%;
-  margin: 0 auto;
-  min-height: 30vh;
-}
-main table,
-main tr,
-main td {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 18px;
-  gap: 50px;
-}
-main .total {
+body main .total {
   margin-top: 10%;
 }
-main button {
+body main button {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 500;
@@ -78,23 +108,36 @@ main button {
   z-index: 1;
   transition: color 0.4s;
 }
-main button::before {
+body main button::before {
   content: "";
   position: absolute;
   top: 0;
   left: 50%;
   width: 300%;
   height: 100%;
-  background: #0284C7;
+  background: #0284c7;
   z-index: -1;
   transition: all 0.4s;
   transform: translateX(-50%) scaleX(0);
   transform-origin: left;
 }
-main button:hover::before {
+body main button:hover::before {
   transform: translateX(-50%) scaleX(1);
 }
-main button:hover {
+body main button:hover {
   color: #000;
   border: none;
+}
+
+#navbarNavAltMarkup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#navbarNavAltMarkup .cart-icon {
+  margin-right: 15%;
+  color: #e2e8f0;
+}
+#navbarNavAltMarkup .cart-icon:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

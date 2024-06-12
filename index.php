@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="main.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0e39d36e41.js" crossorigin="anonymous"></script>
   <title>AZ_Store</title>
 </head>
 
@@ -20,66 +21,67 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="?c=home">Home</a>
-          <a class="nav-link" href="?c=products">Product</a>
-          <a class="nav-link" href="?c=cart">Cart</a>
+          <a class="nav-link" href="?c=products">Products</a>
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
           <a class="nav-link disabled" aria-disabled="true">Login</a>
         </div>
+        <a class="cart-icon" href="?c=cart"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
     </div>
   </nav>
   <main>
-    <div class="shoe">
-      <p>
-        SHOE THE
-      </p>
-      <p>RIGHT <span class="one">ONE</span>.
-      </p>
-      <button class="btn btn-primary btn-sm">See our store</button>
-    </div>
-    <div class="nike">
-      <img class="shoe1" src="shoe_one.png">
-      NIKE
-    </div>
+    <article id="main-wrapper">
+      <div class="shoe">
+        <p>
+          SHOE THE
+        </p>
+        <p>RIGHT <span class="one">ONE</span>.
+        </p>
+        <a href="?c=products"><button class="btn btn-primary btn-sm">See our store</button></a>
+      </div>
+      <div class="nike">
+        <img class="shoe1" src="shoe_one.png">
+        NIKE
+      </div>
+    </article>
+    <?php
+    session_start();
+    $c = $_GET['c'];
+    $a = $_GET['a'] ?? null;
+
+    function getPath($page)
+    {
+      require __DIR__ . "/" . $page . ".php";
+    }
+
+    if (!isset($c)) {
+      header("LOCATION: ?c=home");
+    }
+    switch ($c) {
+      case 'home':
+        getPath('pages/home');
+        break;
+      case 'cart':
+        getPath('pages/cart');
+        break;
+      case 'products':
+        getPath('pages/products');
+        break;
+      case 'add-to-cart':
+        getPath('controller/addToCart');
+        break;
+
+      case 'shipping-address':
+        getPath('pages/shippingAddress');
+        break;
+        // pour ajouter une page rajouter un case en suivant les exemples précèdents
+      default:
+        getPath('pages/404');
+        break;
+    }
+
+    ?>
   </main>
-  <?php
-  session_start();
-  $c = $_GET['c'];
-  $a = $_GET['a'] ?? null;
-
-  function getPath($page)
-  {
-    require __DIR__ . "/" . $page . ".php";
-  }
-
-  if (!isset($c)) {
-    header("LOCATION: ?c=home");
-  }
-  switch ($c) {
-    case 'home':
-      getPath('pages/home');
-      break;
-    case 'cart':
-      getPath('pages/cart');
-      break;
-    case 'products':
-      getPath('pages/products');
-      break;
-    case 'add-to-cart':
-      getPath('controller/addToCart');
-      break;
-
-    case 'shipping-address':
-      getPath('pages/shippingAddress');
-      break;
-      // pour ajouter une page rajouter un case en suivant les exemples précèdents
-    default:
-      getPath('pages/404');
-      break;
-  }
-
-  ?>
-
 </body>
 
 </html>

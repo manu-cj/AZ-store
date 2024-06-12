@@ -1,3 +1,18 @@
 @import '_reset';
 @import '_productPage';
 @import '_cart';
+
+#navbarNavAltMarkup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .cart-icon {
+        margin-right: 15%;
+        color: #e2e8f0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
