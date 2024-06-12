@@ -1,4 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1e293b;
+  color: #e2e8f0;
+  min-height: 100vh;
+  width: 100%;
+}
+body header {
+  background-color: #0f172a;
+}
+body header nav .store {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+body header nav a {
+  text-decoration: none;
+}
+body header nav a:visited {
+  color: #e2e8f0;
+}
+body header nav .link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #e2e8f0;
+}
+body header nav .shopping-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-right: 20px;
+  gap: 50px;
+  color: #e2e8f0;
+}
+body header nav .shopping-cart .panier {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(8%) saturate(350%) hue-rotate(48deg) brightness(97%) contrast(93%);
+}
+body main h1 {
+  text-align: center;
+  margin-top: 3%;
+  text-transform: uppercase;
+  margin-bottom: 3%;
+}
+body main table {
+  border: 1px solid #e2e8f0;
+  width: 50%;
+  margin: 0 auto;
+  min-height: 30vh;
+}
+body main table,
+body main tr,
+body main td {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 18px;
+  gap: 50px;
+}
+body main .total {
+  margin-top: 10%;
+}
+body main button {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  width: 148px;
+  height: 45px;
+  border: 2px solid #fff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: 0 0;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s;
+}
+body main button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 300%;
+  height: 100%;
+  background: #0284C7;
+  z-index: -1;
+  transition: all 0.4s;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: left;
+}
+body main button:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+body main button:hover {
+  color: #000;
+  border: none;
 }/*# sourceMappingURL=cart.css.map */

@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .articles-container {
@@ -19,4 +21,123 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1e293b;
+  color: #e2e8f0;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+}
+body main #main-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+body main #cart {
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  right: 0;
+  text-align: center;
+}
+body main #cart table {
+  border: 1px solid #e2e8f0;
+  width: 450px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  min-height: 55vh;
+  background-color: rgba(0, 0, 0, 0.055);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  font-size: small;
+}
+body main #cart table tr {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+body main #cart table tr td form .quantity {
+  width: 50%;
+}
+body main #cart table .table-footer {
+  display: flex;
+  justify-content: space-around;
+}
+body main #cart table .total {
+  display: flex;
+  flex-direction: row;
+}
+body main h1 {
+  text-align: center;
+  margin-top: 3%;
+  text-transform: uppercase;
+  margin-bottom: 3%;
+}
+body main .total {
+  margin-top: 10%;
+}
+body main button {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  width: 148px;
+  height: 45px;
+  border: 1px solid #e2e8f0;
+  margin: auto;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: 0 0;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s;
+}
+body main button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 300%;
+  height: 100%;
+  background: #0284c7;
+  z-index: -1;
+  transition: all 0.4s;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: left;
+}
+body main button:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+body main button:hover {
+  color: #000;
+  border: none;
+}
+
+#navbarNavAltMarkup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#navbarNavAltMarkup .cart-icon {
+  margin-right: 15%;
+  color: #e2e8f0;
+}
+#navbarNavAltMarkup .cart-icon:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
