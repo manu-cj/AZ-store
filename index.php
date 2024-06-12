@@ -18,22 +18,14 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
-<<<<<<< HEAD
-        <a class="nav-link" href="#">About</a>
-        <a class="nav-link" href="#">Product</a>
-        <a class="nav-link" href="#">Contact</a>
-        <a class="nav-link disabled login" aria-disabled="true">Login</a>
-=======
         <a class="nav-link" href="?c=products">Product</a>
         <a class="nav-link" href="?c=cart">cart</a>
         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         <a class="nav-link disabled" aria-disabled="true">Login</a>
->>>>>>> afea0e6fa7f4dd3fca7f05284efdc49560494962
       </div>
     </div>
   </div>
 </nav>
-<<<<<<< HEAD
     <main>
       <div class="shoe">
         <p>
@@ -48,7 +40,6 @@
         NIKE
       </div>
     </main>
-=======
     <?php
 
     $c = $_GET['c'];
@@ -79,6 +70,5 @@
     }
     ?>
    
->>>>>>> afea0e6fa7f4dd3fca7f05284efdc49560494962
 </body>
 </html>
