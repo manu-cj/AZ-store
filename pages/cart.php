@@ -1,5 +1,3 @@
-<?php session_start(); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,20 +9,6 @@
 </head>
 
 <body>
-
-  <header>
-    <nav>
-      <div class="store">
-      <a href="../index.php">AZ[store]</a></div>
-      <div class="link">
-      <a href="../index.php">Home</a>
-      <a href="#">Features</a>
-      <a href="./pages/cart.php">Cart</a>
-      <a>Disabled</a></div>
-      <div class="shopping-cart">
-      <a href="./cart.php" alt="shopping cart"><img class="panier" src="../assets/images/shopping-cart.svg" alt="Cart"></a><span>Login</span></div>
-
-  </header>
 <main>
   <h1>Shopping Cart</h1>
 
@@ -259,18 +243,10 @@
     </tr>
   </table>
   <div>
-    <a href="../index.php" alt="homepage"><button class="back">Back to shopping</button></a>
+    <a href="?c=products" alt="homepage"><button class="back">Back to shopping</button></a>
     <a href="../checkout.php" alt="checkout"><button>Purchase</button></a>
   </div>
   </main>
-  <footer>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Products</a>
-      <a href="#">Contact</a>
-    </nav>
-  </footer>
 
 
 </body>

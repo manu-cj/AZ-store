@@ -1,25 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.articles-container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-  row-gap: 45px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}/*# sourceMappingURL=style.css.map */@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -51,66 +30,32 @@ body {
   min-height: 100vh;
   width: 100%;
 }
-body header {
-  background-color: #0f172a;
-}
-body header nav .store {
-  font-size: 20px;
-  padding-top: 20px;
-  padding-left: 20px;
-}
-body header nav a {
-  text-decoration: none;
-}
-body header nav a:visited {
-  color: #e2e8f0;
-}
-body header nav .link {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  color: #e2e8f0;
-}
-body header nav .shopping-cart {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  padding-right: 20px;
-  gap: 50px;
-  color: #e2e8f0;
-}
-body header nav .shopping-cart .panier {
-  width: 35px;
-  height: 35px;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(8%) saturate(350%) hue-rotate(48deg) brightness(97%) contrast(93%);
-}
-body main h1 {
+
+main h1 {
   text-align: center;
   margin-top: 3%;
   text-transform: uppercase;
   margin-bottom: 3%;
 }
-body main table {
+main table {
   border: 1px solid #e2e8f0;
   width: 50%;
   margin: 0 auto;
   min-height: 30vh;
 }
-body main table,
-body main tr,
-body main td {
+main table,
+main tr,
+main td {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   font-size: 18px;
   gap: 50px;
 }
-body main .total {
+main .total {
   margin-top: 10%;
 }
-body main button {
+main button {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 500;
@@ -118,7 +63,7 @@ body main button {
   height: 45px;
   border: 1px solid #e2e8f0;
   margin: auto;
-  margin-top: 3%;
+  margin-top: 2%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -133,7 +78,7 @@ body main button {
   z-index: 1;
   transition: color 0.4s;
 }
-body main button::before {
+main button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -146,10 +91,10 @@ body main button::before {
   transform: translateX(-50%) scaleX(0);
   transform-origin: left;
 }
-body main button:hover::before {
+main button:hover::before {
   transform: translateX(-50%) scaleX(1);
 }
-body main button:hover {
+main button:hover {
   color: #000;
   border: none;
 }/*# sourceMappingURL=style.css.map */

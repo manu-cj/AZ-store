@@ -158,7 +158,7 @@ if (isset($_POST['add_to_cart']) && isset($_POST['item_id']) && array_key_exists
     }
     if (!isset($_SESSION['cart'][$item_id])) {
         // Si l'item n'est pas dans le panier, l'ajoute avec la quantité spécififée
-        $_SESSION['cart'][$item_id] = array("quantity" => $quantity, "price" => $item["price"], "product" => $item["product"]);
+        $_SESSION['cart'][$item_id] = array("quantity" => $quantity, "price" => $item["price"], "product" => $item[""]);
     } else {
         // Si l'item est déjà dans le panier, met à jour la quantité
         $_SESSION['cart'][$item_id]["quantity"] += $quantity;
