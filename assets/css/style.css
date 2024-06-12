@@ -4,6 +4,25 @@
   padding: 0;
 }
 
+.articles-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 45px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #1e293b;
@@ -76,14 +95,16 @@ body main button {
   font-weight: 500;
   width: 148px;
   height: 45px;
-  border: 2px solid #fff;
+  border: 1px solid #e2e8f0;
   margin: auto;
+  margin-top: 3%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 0;
   background: 0 0;
-  color: #fff;
+  color: #e2e8f0;
   text-transform: uppercase;
   position: relative;
   cursor: pointer;
@@ -110,4 +131,4 @@ body main button:hover::before {
 body main button:hover {
   color: #000;
   border: none;
-}/*# sourceMappingURL=cart.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/cart.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <title>Shopping Cart</title>
 </head>
 
@@ -254,12 +254,12 @@
     ?>
     <tr>
       <td></td>
-      <td>Total: €<?php echo get_cart_total(); ?></td>
+      <td class="total">Total: €<?php echo get_cart_total(); ?></td>
       <td></td>
     </tr>
   </table>
   <div>
-    <a href="../index.php" alt="homepage"><button>Back to shopping</button></a>
+    <a href="../index.php" alt="homepage"><button class="back">Back to shopping</button></a>
     <a href="../checkout.php" alt="checkout"><button>Purchase</button></a>
   </div>
   </main>
