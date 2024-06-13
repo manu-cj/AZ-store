@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $valid = false;
 $error = false;
 
@@ -173,6 +175,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2>ORDER SUMMARY</h2>
         <hr>
         <p class="card-article"><?php echo get_cart_quantity(); ?> ARTICLE IN YOUR CART</p>
+    <?php
+
+    if (isset($_SESSION['product-data'])) {
+        echo "<table class=\"card-table\">";
+        foreach ($_SESSION['product-data'] as $item) {
+          $price = $item["price"] * intval($item["quantity"]);
+          $qtt = $item["quantity"];
+          $name = $item["name"];
+
+          echo "<tr>";
+          echo "<td>€ $price</td>";
+          echo "<td>x$qtt</td>";
+          echo "<td class=\"td-name\">$name</td>";
+          echo "</tr>";
+
+        }
+        echo "</table>";
+        ?>
+      
+      <script>
+        let btn_article = document.querySelector(".card-article");
+
+            let table = document.querySelector(".card-table");
+            table.style.visibility = "hidden";
+            table.style.position = "absolute";
+
+
+        function openList() {
+            let table = document.querySelector(".card-table");
+            table.style.visibility = table.style.visibility == "hidden" ? "visible" : "hidden";
+            table.style.position = table.style.position == "absolute" ? "relative" : "absolute";
+        }
+
+        btn_article.addEventListener('click', function(e) {
+            openList();
+        });
+      </script>
+        
+    <?php
+      }
+      ?>
+
         <div class="sep"><p class="card-total">Subtotal</p><p class="card-total">€ <?php echo get_cart_total(); ?></p></div>
         <div class="sep"><p class="card-delivery">Delivery</p><p class="card-delivery">FREE</p></div>
         <p class="eco">Very good!<br><span class="card-message">By reaching the shipping threshold, you have helped to minimize the environmental impact of your shipment</span></p>

@@ -93,71 +93,92 @@ header {
 }
 
 .shopCard {
-  width: 25%;
+width: 25%;
 
-  padding: 2%;
-    //margin-left: 2%;
+padding: 2%;
+  //margin-left: 2%;
 
-  .total {
+.total {
     background-color: rgb(213, 213, 213);
     padding: 0.5em;
   }
 
-  .eco {
-    padding: 0.5em;
-    border: solid 1px rgb(141, 190, 66);
-    background-color: rgb(228, 252, 192);
-    font-weight: 600;
-    font-size: 0.9em;
+.eco {
+  padding: 0.5em;
+  border: solid 1px rgb(141, 190, 66);
+  background-color: rgb(228, 252, 192);
+  font-weight: 600;
+  font-size: 0.9em;
 
-    margin: {
-      top: 1em;
-      bottom: 1em;
+margin: {
+    top: 1em;
+    bottom: 1em;
+  }
+}
+
+hr {
+  margin: {
+    top: 1em;
+    bottom: 1em;
+  }
+}
+
+.card-article {
+  font-weight: 600;
+  margin-bottom: 1em;
+  
+    transition: color 1s, border-bottom 1s;
+  
+    &:hover {
+      color: #203557;
+      border-bottom: solid 1px black;
     }
-  }
+}
 
-  hr {
-    margin: {
-      top: 1em;
-      bottom: 1em;
-    }
-  }
+.card-message {
+  font-size: 0.85em;
+  font-weight: 100;
+}
 
-  .card-article {
-    font-weight: 600;
-  }
+.card-total,
+.total-total {
+  font-weight: 600;
+}
 
-  .card-message {
-    font-size: 0.85em;
-    font-weight: 100;
+.card-total {
+  span {
+    text-align: right;
   }
+}
 
-  .card-total,
-  .total-total {
-    font-weight: 600;
-  }
+.card-livraison,
+.total-tva {
+  font-weight: 200;
+  font-size: 0.8em;
+}
 
-  .card-total {
-    span {
+.sep {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-table {
+  //border: solid 1px black;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  width: 100%;
+
+  td {
+    border: solid 1px black;
+    padding: 0.5%;
+    text-align: center;
+
+    //width: 33.33%;
+    &.td-name {
       text-align: right;
     }
   }
-
-  .card-article {
-    margin-bottom: 1.5em;
-  }
-
-  .card-livraison,
-  .total-tva {
-    font-weight: 200;
-    font-size: 0.8em;
-  }
-
-  .sep {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+}
 }
 
 form {

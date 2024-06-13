@@ -96,6 +96,12 @@ header .caseNumberFalse {
 }
 .shopCard .card-article {
   font-weight: 600;
+  margin-bottom: 1em;
+  transition: color 1s, border-bottom 1s;
+}
+.shopCard .card-article:hover {
+  color: #203557;
+  border-bottom: solid 1px black;
 }
 .shopCard .card-message {
   font-size: 0.85em;
@@ -108,9 +114,6 @@ header .caseNumberFalse {
 .shopCard .card-total span {
   text-align: right;
 }
-.shopCard .card-article {
-  margin-bottom: 1.5em;
-}
 .shopCard .card-livraison,
 .shopCard .total-tva {
   font-weight: 200;
@@ -120,6 +123,19 @@ header .caseNumberFalse {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.shopCard .card-table {
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  width: 100%;
+}
+.shopCard .card-table td {
+  border: solid 1px black;
+  padding: 0.5%;
+  text-align: center;
+}
+.shopCard .card-table td.td-name {
+  text-align: right;
 }
 
 form {
