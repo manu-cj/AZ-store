@@ -122,8 +122,7 @@ $articles = [
       ]
 ];
 
-// Obtenir les 5 derniers produits
-$lastFiveProducts = array_slice($articles, -5);
+
 
 foreach ($articles as $item) {
 ?>
@@ -166,5 +165,6 @@ if (isset($_POST['add_to_cart']) && isset($_POST['item_id']) && array_key_exists
         $_SESSION['cart'][$item_id]["quantity"] += $quantity;
     }
 }
+
 
 ?>

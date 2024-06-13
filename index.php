@@ -55,7 +55,14 @@
 
     <div class="OurProduct">
       <span class="our">Our</span>
-      last product
+      <p>last product</p>
+      <div class="container1">
+      <?php
+      
+      include("pages/lastproducts.php");
+     
+      ?>
+      </div>
       
     </div>
     <?php

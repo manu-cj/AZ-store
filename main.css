@@ -73,14 +73,27 @@ body{
 }
 
 .OurProduct{
-    font-size: 15px;
+    
+    font-size: 20px;
     color: white;
     font-family: "Ubuntu", sans-serif;
     font-weight: bold;
     margin-top: 40px;
-    margin-left: 180px;
+    margin-left: 190px;
+    flex-direction: column;
+    display: flex;
 }
+
 
 .our{
     color: blue;
+}
+
+.container1{
+    flex-direction: row;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-right: 40px;
+
 }
