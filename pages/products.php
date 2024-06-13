@@ -20,6 +20,7 @@ $products = json_decode($productsJson, true);
 // }
 
 ?>
+
 <container class="articles-container">
 <?php
 foreach ($products as $key => $value) {

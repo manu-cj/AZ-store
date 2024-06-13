@@ -68,7 +68,7 @@
         break;
       // pour ajouter une page rajouter un case en suivant les exemples précèdents
       default:
-        getPath('404');
+        getPath('pages/404');
         break;
     }
     
