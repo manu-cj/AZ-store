@@ -25,23 +25,7 @@
   text-decoration: none;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: #1e293b;
-  color: #e2e8f0;
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-}
-body main {
-  display: flex;
-  flex-direction: column;
-}
-body main #main-wrapper {
-  display: flex;
-  flex-direction: row;
-}
-body main #cart {
+#cart {
   position: absolute;
   width: -moz-max-content;
   width: max-content;
@@ -49,8 +33,9 @@ body main #cart {
   height: max-content;
   right: 0;
   text-align: center;
+  color: #e2e8f0;
 }
-body main #cart table {
+#cart table {
   border: 1px solid #e2e8f0;
   width: 450px;
   margin: 0 auto;
@@ -62,31 +47,34 @@ body main #cart table {
           backdrop-filter: blur(20px);
   font-size: small;
 }
-body main #cart table tr {
+#cart table tr {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
-body main #cart table tr td form .quantity {
+#cart table tr td form .quantity {
   width: 50%;
 }
-body main #cart table .table-footer {
+#cart table .table-footer {
   display: flex;
   justify-content: space-around;
 }
-body main #cart table .total {
+#cart table .total {
   display: flex;
   flex-direction: row;
 }
-body main h1 {
+
+h1 {
   text-align: center;
   margin-top: 3%;
   text-transform: uppercase;
   margin-bottom: 3%;
 }
-body main .total {
+
+.total {
   margin-top: 10%;
 }
-body main button {
+
+button {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 500;
@@ -109,7 +97,7 @@ body main button {
   z-index: 1;
   transition: color 0.4s;
 }
-body main button::before {
+button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -122,10 +110,10 @@ body main button::before {
   transform: translateX(-50%) scaleX(0);
   transform-origin: left;
 }
-body main button:hover::before {
+button:hover::before {
   transform: translateX(-50%) scaleX(1);
 }
-body main button:hover {
+button:hover {
   color: #000;
   border: none;
 }

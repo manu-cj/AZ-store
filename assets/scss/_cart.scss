@@ -6,136 +6,118 @@
   text-decoration: none;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: #1e293b;
+#cart {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  right: 0;
+  text-align: center;
   color: #e2e8f0;
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
 
-  main {
+  table {
+    border: 1px solid #e2e8f0;
+    width: 450px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    position: relative;
+    min-height: 55vh;
+    background-color: rgba(0, 0, 0, 0.055);
+    backdrop-filter: blur(20px);
+    font-size: small;
 
-    #main-wrapper {
-      display: flex;
-      flex-direction: row;
-    }
-
-    #cart {
-      position: absolute;
-      width: max-content;
-      height: max-content;
-      right: 0;
-      text-align: center;
-    
-      table {
-        border: 1px solid #e2e8f0;
-        width: 450px;
-        margin: 0 auto;
-        display: flex;
-        position: relative;
-        min-height: 55vh;
-        background-color: rgba(0, 0, 0, 0.055);
-        backdrop-filter: blur(20px);
-        font-size: small;
-  
-        tr {
-          display: grid;
-          grid-template-columns: repeat(5, minmax(0, 1fr));
-          
-          td {
-            form {
-              .quantity {
-                width: 50%;
-              }
-            }
+    tr {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      
+      td {
+        form {
+          .quantity {
+            width: 50%;
           }
-          
         }
-
-        .table-footer {
-          display: flex;
-          justify-content: space-around;
-        }
-
-        .total {
-          display: flex;
-          flex-direction: row;
-        }
-  
       }
+      
     }
 
-    h1 {
-      text-align: center;
-      margin-top: 3%;
-      text-transform: uppercase;
-      margin-bottom: 3%;
+    .table-footer {
+      display: flex;
+      justify-content: space-around;
     }
-
-    
-
-    // table,
-    // tr,
-    // td {
-    //   display: flex;
-    //   flex-direction: row;
-    //   justify-content: space-around;
-    //   font-size: 18px;
-    //   gap: 50px;
-    // }
 
     .total {
-      margin-top: 10%;
-    }
-
-    button {
-      font-family: "Roboto", sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      width: 148px;
-      height: 45px;
-      border: 1px solid #e2e8f0;
-      margin: auto;
-      margin-top: 2%;
       display: flex;
       flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      background: 0 0;
-      color: #e2e8f0;
-      text-transform: uppercase;
-      position: relative;
-      cursor: pointer;
-      overflow: hidden;
-      z-index: 1;
-      transition: color 0.4s;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 300%;
-        height: 100%;
-        background: #0284c7;
-        z-index: -1;
-        transition: all 0.4s;
-        transform: translateX(-50%) scaleX(0);
-        transform-origin: left;
-      }
-
-      &:hover::before {
-        transform: translateX(-50%) scaleX(1);
-      }
-
-      &:hover {
-        color: #000;
-        border: none;
-      }
     }
+
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-top: 3%;
+  text-transform: uppercase;
+  margin-bottom: 3%;
+}
+
+
+
+// table,
+// tr,
+// td {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   font-size: 18px;
+//   gap: 50px;
+// }
+
+.total {
+  margin-top: 10%;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  width: 148px;
+  height: 45px;
+  border: 1px solid #e2e8f0;
+  margin: auto;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: 0 0;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300%;
+    height: 100%;
+    background: #0284c7;
+    z-index: -1;
+    transition: all 0.4s;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: left;
+  }
+
+  &:hover::before {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  &:hover {
+    color: #000;
+    border: none;
   }
 }
