@@ -1,5 +1,4 @@
 <?php
-
 $articles = [
     [
      "id"=> 1,
@@ -123,6 +122,8 @@ $articles = [
       ]
 ];
 
+
+
 foreach ($articles as $item) {
 ?>
     <div>
@@ -157,12 +158,13 @@ if (isset($_POST['add_to_cart']) && isset($_POST['item_id']) && array_key_exists
         $_SESSION['cart'] = array();
     }
     if (!isset($_SESSION['cart'][$item_id])) {
-        // If the item isn't in the cart, add it with the specified quantity
-        $_SESSION['cart'][$item_id] = array("quantity" => $quantity, "price" => $item["price"], "name" => $item["name"]);
+        // Si l'item n'est pas dans le panier, l'ajoute avec la quantité spécififée
+        $_SESSION['cart'][$item_id] = array("quantity" => $quantity, "price" => $item["price"], "product" => $item[""]);
     } else {
-        // If the item is already in the cart, update the quantity
+        // Si l'item est déjà dans le panier, met à jour la quantité
         $_SESSION['cart'][$item_id]["quantity"] += $quantity;
     }
 }
+
 
 ?>
