@@ -94,7 +94,7 @@ function get_cart_total()
           <td>
             <form method="post" action="?c=cart">
               <input type="hidden" name="item_id" value="<?php echo $item_id; ?>">
-              <button type="submit" name="remove_from_cart" value="Remove"><i class="fa-solid fa-trash"></i></button>
+              <button class="deleteCartArticle" type="submit" name="remove_from_cart" value="Remove"><i class="fa-solid fa-trash"></i></button>
             </form>
           </td>
         </tr>
@@ -111,6 +111,6 @@ function get_cart_total()
     </tr>
   </table>
   <div>
-    <a href="./pages/shippingAddress.php" alt="shipping-address"><button>Purchase</button></a>
+    <a href="?c=shipping-address" alt="shipping-address"><button class="button">Purchase</button></a>
   </div>
 </section>

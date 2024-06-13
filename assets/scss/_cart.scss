@@ -76,7 +76,19 @@
   margin-top: 10%;
 }
 
-button {
+.deleteCartArticle {
+  background: none;
+  border: none;
+  i {
+    color: tomato;
+    &:hover {
+      color: rgb(208, 56, 29);
+      scale: 1.1;
+    }
+  }
+}
+
+.button {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 500;
