@@ -63,6 +63,7 @@
       case 'shipping-address':
         getPath('pages/shippingAddress');
         break;
+
         // pour ajouter une page rajouter un case en suivant les exemples précèdents
       default:
         getPath('pages/404');
@@ -71,6 +72,16 @@
 
     ?>
   </main>
+
+  <footer>
+    <nav>
+        <a href="?c=home">Home</a>
+        <a href="#">About</a>
+        <a href="?c=products">Products</a>
+        <a href="#">Contact</a>
+    </nav>
+</footer>
+
 </body>
 
 </html>
