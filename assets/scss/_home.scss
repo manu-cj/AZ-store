@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body{
-    background-color: #172554;
+    background: linear-gradient(360deg, #000000, #333366);
 }
 
 main {
@@ -43,6 +43,28 @@ main {
     color: #071933;
     font-weight: bold;
     right: 20px;
+}
+
+.nike2-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+        width: 40%;
+        color: white;
+        text-align: center;
+    }
+    strong {
+        color: rgb(14, 106, 210);
+    }
+}
+.nike2 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    color: white;
 }
 .shoe1{
     position: absolute;
@@ -138,15 +160,15 @@ main {
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin-bottom: 30px; 
 
     a {
         text-decoration-line: none;
         color: white;
 
-        i {
+        i { 
             margin-left: 10px;
             margin-right: 10px;
-            
         }
         .fa-arrow-right {
             animation: moveArrowright 5s forwards ease-in-out;
@@ -155,6 +177,11 @@ main {
         .fa-arrow-left {
             animation: moveArrowLeft 5s forwards ease-in-out;
             animation-iteration-count: infinite;
+        }
+        strong {
+            animation: changeColorSeeMore 5s forwards ease-out;
+            animation-iteration-count: infinite;
+            color: white;
         }
 
     }
@@ -191,5 +218,46 @@ main {
     100% {
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
         transform: scale(1) translateX(0);
+    }
+}
+
+@keyframes changeColorSeeMore {
+    0% {
+        color: white;
+    }
+
+    30% {
+        color: rgb(14, 106, 210);
+    }
+
+    60% {
+        color: rgb(14, 106, 210);
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+.feedback {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 30px;
+    i {
+        color: rgb(217, 170, 0);
+        margin-top: 10px;
+    }
+    .feedback-client {
+        width: 20%;
+        text-align: center;
+
+        img {
+            width: 60px;
+            border-radius: 50%;
+        }
     }
 }
