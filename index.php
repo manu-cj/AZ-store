@@ -43,7 +43,11 @@
         <img class="shoe1" src="shoe_one.png">
         NIKE
       </div>
+    
+
+    
     </article>
+  </main>
     <?php
     session_start();
     $c = $_GET['c'];
