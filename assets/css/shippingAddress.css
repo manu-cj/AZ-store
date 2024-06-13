@@ -1,5 +1,7 @@
 :root {
   --background: white;
+  --background-header: #172554;
+  --page: #1e293b;
 }
 
 * {
@@ -9,19 +11,21 @@
 
 main {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
 }
 
 body {
   width: 100%;
-  background-color: rgb(255, 246, 234);
+  background-color: var(--page);
   overflow-x: hidden;
 }
 
 header {
-  background-color: var(--background);
+  background-color: var(--background-header);
+  border-bottom: solid 1px white;
   width: 100%;
+  color: white;
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -66,14 +70,12 @@ header .caseNumberFalse {
 
 .form-address {
   width: 50%;
-  margin-right: 2%;
-  padding: 2em;
+  padding: 2%;
 }
 
 .shopCard {
   width: 25%;
-  padding: 1.5em;
-  margin-left: 2%;
+  padding: 2%;
 }
 .shopCard .total {
   background-color: rgb(213, 213, 213);
@@ -227,4 +229,22 @@ h2 {
 h3 {
   margin-top: 1em;
   font-size: 1.2em;
+}
+
+@media only screen and (max-width: 720px) {
+  main {
+    flex-direction: column-reverse;
+  }
+  main .form-address,
+  main .shopCard {
+    width: 80%;
+    margin-left: 9%;
+  }
+  main .livraisonSelect {
+    width: 100%;
+    font-size: 0.9em;
+  }
+  main .input {
+    width: 100%;
+  }
 }/*# sourceMappingURL=shippingAddress.css.map */

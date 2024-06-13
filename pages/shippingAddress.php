@@ -2,6 +2,30 @@
 $valid = false;
 $error = false;
 
+    function get_cart_total()
+    {
+      $total = 0;
+      if (isset($_SESSION['product-data'])) {
+        foreach ($_SESSION['product-data'] as $item) {
+          $price = $item["price"];
+          $item_total = intval($price) * intval($item["quantity"]);
+          $total += $item_total;
+        }
+      }
+      return $total;
+    }
+
+function get_cart_quantity()
+    {
+      $quantity = 0;
+      if (isset($_SESSION['product-data'])) {
+        foreach ($_SESSION['product-data'] as $item) {
+          $quantity += intval($item["quantity"]);
+        }
+      }
+      return $quantity;
+    }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $valid = true;
 
@@ -63,8 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form id="contactForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
             <?php 
-
-                    if($error){
+                if($error){
                     echo "<h2>ERROR</h2>";
                     echo "<hr>";
                     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -76,10 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if(empty($address)){echo "<p class=\"error\">Address field is empty!</p>";}
                     if(empty($email)){echo "<p class=\"error\">Email field is empty!</p>";}
                     if($checkCondition != "Yes"){echo "<p class=\"error\">Please accept the T&Cs.</p>";}
-                } 
+                }
             ?>
-
-
             
             <h2>DETAILS</h2>
             <hr>
@@ -114,8 +135,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <option value="express">Express delivery  [ 24-48 hours* ]</option>
             </select>
 
-            <div class="CGU"><input type="checkbox" name="checkCondition" value="Yes" required> <label class="comment">I accept the general conditions of Vans and I acknowledge having read and understood the Privacy Policy of Vans.</label></div>
-            <div class="CGU"><input type="checkbox" name="checkPub" value="Yes"> <label class="comment">I want to be informed about special offers, new products and Vans news.<br> <span>I consent to the processing of my personal data for profile-based marketing purposes, as described in our Privacy Policy.</span></label></div>
+            <div class="CGU"><input type="checkbox" name="checkCondition" value="Yes" required> <label class="comment">I accept the general conditions of AZ-store and I acknowledge having read and understood the Privacy Policy of AZ-store.</label></div>
+            <div class="CGU"><input type="checkbox" name="checkPub" value="Yes"> <label class="comment">I want to be informed about special offers, new products and AZ-store news.<br> <span>I consent to the processing of my personal data for profile-based marketing purposes, as described in our Privacy Policy.</span></label></div>
 
             <button type="submit">PAYMENT</button>
         </form>
@@ -151,12 +172,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="shopCard">
         <h2>ORDER SUMMARY</h2>
         <hr>
-        <p class="card-article">X ARTICLE IN YOUR CART</p>
-        <div class="sep"><p class="card-total">Subtotal</p><p class="card-total">€ 95,00</p></div>
+        <p class="card-article"><?php echo get_cart_quantity(); ?> ARTICLE IN YOUR CART</p>
+        <div class="sep"><p class="card-total">Subtotal</p><p class="card-total">€ <?php echo get_cart_total(); ?></p></div>
         <div class="sep"><p class="card-delivery">Delivery</p><p class="card-delivery">FREE</p></div>
         <p class="eco">Very good!<br><span class="card-message">By reaching the shipping threshold, you have helped to minimize the environmental impact of your shipment</span></p>
         <div class="total">
-            <div class="sep"><p class="total-total">Total</p><p class="total-total">€ 95,00</p></div>
+            <div class="sep"><p class="total-total">Total</p><p class="total-total">€ <?php echo get_cart_total(); ?></p></div>
             <p class="total-vat">(21% VAT included)</p>
         </div>
         <?php
