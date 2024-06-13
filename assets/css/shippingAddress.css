@@ -1,0 +1,230 @@
+:root {
+  --background: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+body {
+  width: 100%;
+  background-color: rgb(255, 246, 234);
+  overflow-x: hidden;
+}
+
+header {
+  background-color: var(--background);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+header .sep-raw {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-weight: 900;
+}
+header .caseNumberTrue,
+header .caseNumberFalse {
+  margin-left: 1em;
+  margin-right: 0.25em;
+  padding: 0.5em;
+  color: white;
+  font-weight: 900;
+}
+header .-false {
+  color: gray;
+}
+header .caseNumberTrue {
+  background-color: green;
+}
+header .caseNumberFalse {
+  background-color: gray;
+}
+
+.form-address,
+.shopCard {
+  background-color: var(--background);
+  border-radius: 0.1em;
+  height: -moz-min-content;
+  height: min-content;
+  margin-top: 3em;
+}
+
+.form-address {
+  width: 50%;
+  margin-right: 2%;
+  padding: 2em;
+}
+
+.shopCard {
+  width: 25%;
+  padding: 1.5em;
+  margin-left: 2%;
+}
+.shopCard .total {
+  background-color: rgb(213, 213, 213);
+  padding: 0.5em;
+}
+.shopCard .eco {
+  padding: 0.5em;
+  border: solid 1px rgb(141, 190, 66);
+  background-color: rgb(228, 252, 192);
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.shopCard hr {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.shopCard .card-article {
+  font-weight: 600;
+}
+.shopCard .card-message {
+  font-size: 0.85em;
+  font-weight: 100;
+}
+.shopCard .card-total,
+.shopCard .total-total {
+  font-weight: 600;
+}
+.shopCard .card-total span {
+  text-align: right;
+}
+.shopCard .card-article {
+  margin-bottom: 1.5em;
+}
+.shopCard .card-livraison,
+.shopCard .total-tva {
+  font-weight: 200;
+  font-size: 0.8em;
+}
+.shopCard .sep {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: -moz-min-content;
+  height: min-content;
+}
+form .input {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+form .inputfield {
+  height: 2em;
+  padding-left: 1em;
+}
+form label {
+  font-size: 1.1em;
+  font-weight: 900;
+  margin-top: 0.5em;
+}
+form h2 {
+  margin-top: 1em;
+}
+form hr {
+  margin-bottom: 1em;
+}
+form .comment {
+  font-size: 0.8em;
+  color: gray;
+  margin-top: 0.1em;
+}
+form .livraisonSelect {
+  height: 2em;
+  padding-left: 1em;
+  font-size: 1.2em;
+  font-weight: 510;
+  width: 70%;
+}
+form .livraisonSelect option {
+  font-weight: 700;
+  font-size: 0.75em;
+}
+form .livraisonSelect option span {
+  color: gray;
+  font-weight: lighter;
+}
+form .CGU {
+  width: 90%;
+  margin-top: 1em;
+}
+form .CGU input {
+  border-radius: 0.1em;
+}
+form .CGU input:hover {
+  border: solid 1px red;
+}
+form .CGU label {
+  margin-left: 0.5em;
+}
+form .CGU label span {
+  font-size: 0.75em;
+}
+form button {
+  margin: 1em;
+  width: 40%;
+  height: 3em;
+  font-weight: 900;
+}
+
+footer {
+  height: 2em;
+  width: 100vw;
+}
+
+.error {
+  background-color: rgb(255, 27, 27);
+  padding: 0.25em;
+  margin: 0.1em;
+  font-weight: 900;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-text {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.payment-button {
+  background-color: rgb(203, 41, 41);
+  padding: 0.8em;
+  margin: 0.5em;
+  font-weight: 900;
+  color: white;
+  width: 10em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  margin-top: 1em;
+  font-size: 1.2em;
+}/*# sourceMappingURL=shippingAddress.css.map */
