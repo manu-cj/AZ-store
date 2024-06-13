@@ -1,4 +1,5 @@
 <?php
+
 $articles = [
     [
      "id"=> 1,
@@ -122,8 +123,6 @@ $articles = [
       ]
 ];
 
-
-
 foreach ($articles as $item) {
 ?>
     <div>
@@ -165,6 +164,5 @@ if (isset($_POST['add_to_cart']) && isset($_POST['item_id']) && array_key_exists
         $_SESSION['cart'][$item_id]["quantity"] += $quantity;
     }
 }
-
 
 ?>
