@@ -25,8 +25,8 @@ $products = json_decode($productsJson, true);
 <?php
 foreach ($products as $key => $value) {
   echo '
-  <form action="?c=add-to-cart" method="post">
-     <div class="card" style="width: 20rem;">
+  <form action="?c=add-to-cart&#' . $value['product'] . '" method="post">
+     <div class="card" style="width: 20rem;" id="' . $value['product'] . '">
       <img src="' . $value['image_url'] . '" class="card-img-top" alt="' . $value['product'] . '" style="height:350px;">
       <div class="card-body">
         <h5 class="card-title">' . $value['product'] . '</h5>
