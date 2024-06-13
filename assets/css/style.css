@@ -41,17 +41,19 @@ body {
   right: 0;
   text-align: center;
   color: #e2e8f0;
+  z-index: 10;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.392);
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
 }
 #cart table {
-  border: 1px solid #e2e8f0;
   width: 450px;
   margin: 0 auto;
   display: flex;
   position: relative;
   min-height: 55vh;
-  background-color: rgba(0, 0, 0, 0.055);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
   font-size: small;
 }
 #cart table tr {
@@ -380,7 +382,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  background-color: rgb(14, 106, 210);
+  background-color: #333366;
   font-family: "Ubuntu", sans-serif;
 }
 .down a {

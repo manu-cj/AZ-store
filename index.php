@@ -23,16 +23,36 @@
           <a class="nav-link" href="?c=products">Products</a>
           <a class="nav-link" href="?c=contact">Contact</a>
         </div>
-        <a class="cart-icon" href="?c=cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        <?php
+        session_start();
+        if (!isset($_SESSION['activeCart'])) {
+          $_SESSION['activeCart'] = false;
+         }else {
+          if ($_SESSION['activeCart'] === true) {
+            include("pages/cart.php");
+          }
+         }
+        if ($_SESSION['activeCart'] === false) {
+        ?>
+        <a class="cart-icon" href="?c=activeCart&cart=on"><i class="fa-solid fa-cart-shopping"></i></a>
+        <?php } ?>
+        <?php
+        if ($_SESSION['activeCart'] === true) {
+        ?>
+        <a class="cart-icon" href="?c=activeCart&cart=of"><i class="fa-solid fa-cart-shopping"></i></a>
+        <?php } ?>
       </div>
     </div>
   </nav>
   <?php
-    session_start();
+
     $c = $_GET['c'];
     $a = $_GET['a'] ?? null;
-  // if ($c !== "cart") {}
-  
+   
+
+
+
+
   ?>
  
     <?php
@@ -59,6 +79,12 @@
         break;
       case 'add-to-cart':
         getPath('controller/addToCart');
+        break;
+      case 'activeCart':
+        getPath('controller/cartController');
+        break;
+      case 'not-display-cart':
+        getPath('controller/notDisplayCartController');
         break;
 
       case 'shipping-address':
