@@ -33,7 +33,7 @@
     session_start();
     $c = $_GET['c'];
     $a = $_GET['a'] ?? null;
-  if ($c !== "cart") {
+  // if ($c !== "cart") {}
   
   ?>
   <main>
@@ -56,7 +56,7 @@
     </article>
   </main>
     <?php
-    }
+    
   
 
     function getPath($page)
