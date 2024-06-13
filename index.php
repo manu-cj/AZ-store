@@ -19,25 +19,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid justify-content-between">
-      <a class="navbar-brand spacer custom-text-color" href="?c=home">AZ[store]</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="?c=home">Home</a>
-          <a class="nav-link" href="?c=products">Products</a>
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          <a class="nav-link disabled" aria-disabled="true">Login</a>
-        </div>
-        <a class="cart-icon" href="?c=cart"><i class="fa-solid fa-cart-shopping"></i></a>
-      </div>
-    </div>
-  </nav>
-  <main>
-    <article id="main-wrapper">
+<article id="main-wrapper">
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid justify-content-between">
     <a class="navbar-brand spacer custom-text-color" href="#">AZ[store]</a>
@@ -55,8 +37,8 @@
     </div>
   </div>
 </nav>
-    <main>
-      <div class="shoe">
+  <main>
+  <div class="shoe">
         <p>
           SHOE THE
         </p>
@@ -68,6 +50,8 @@
         <img class="shoe1" src="shoe_one.png">
         NIKE
       </div>
+    <main>
+      
     </article>
     <?php
     session_start();
