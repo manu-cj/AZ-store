@@ -27,8 +27,11 @@
   <div class="see-more-div">
     <a href="?c=products">
       <i class="fas fa-arrow-right"></i>
-       See more 
+       <strong>See more</strong> 
       <i class="fas fa-arrow-left"></i>
     </a>
   </div>
 </section>
+<?php
+    include("pages/components/feedback.php");
+?>

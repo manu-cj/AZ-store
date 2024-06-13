@@ -21,6 +21,7 @@
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="?c=home">Home</a>
           <a class="nav-link" href="?c=products">Products</a>
+          <a class="nav-link" href="?c=contact">Contact</a>
         </div>
         <a class="cart-icon" href="?c=cart"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>

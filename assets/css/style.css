@@ -131,7 +131,7 @@ body {
 }
 
 body {
-  background-color: #172554;
+  background: linear-gradient(360deg, #000000, #333366);
 }
 
 main {
@@ -171,6 +171,29 @@ main #main-wrapper {
   color: #071933;
   font-weight: bold;
   right: 20px;
+}
+
+.nike2-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nike2-section p {
+  width: 40%;
+  color: white;
+  text-align: center;
+}
+.nike2-section strong {
+  color: rgb(14, 106, 210);
+}
+
+.nike2 {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  color: white;
 }
 
 .shoe1 {
@@ -257,6 +280,7 @@ main #main-wrapper {
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin-bottom: 30px;
 }
 .see-more-div a {
   text-decoration-line: none;
@@ -273,6 +297,11 @@ main #main-wrapper {
 .see-more-div a .fa-arrow-left {
   animation: moveArrowLeft 5s forwards ease-in-out;
   animation-iteration-count: infinite;
+}
+.see-more-div a strong {
+  animation: changeColorSeeMore 5s forwards ease-out;
+  animation-iteration-count: infinite;
+  color: white;
 }
 
 @keyframes moveArrowright {
@@ -303,6 +332,42 @@ main #main-wrapper {
     transform: scale(1) translateX(0);
   }
 }
+@keyframes changeColorSeeMore {
+  0% {
+    color: white;
+  }
+  30% {
+    color: rgb(14, 106, 210);
+  }
+  60% {
+    color: rgb(14, 106, 210);
+  }
+  100% {
+    color: white;
+  }
+}
+.feedback {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 30px;
+}
+.feedback i {
+  color: rgb(217, 170, 0);
+  margin-top: 10px;
+}
+.feedback .feedback-client {
+  width: 20%;
+  text-align: center;
+}
+.feedback .feedback-client img {
+  width: 60px;
+  border-radius: 50%;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -332,7 +397,8 @@ footer {
   top: 0;
   z-index: 3;
   border: none;
-  background-color: rgb(14, 106, 210);
+  border-bottom: 1px rgba(255, 255, 255, 0.215) solid;
+  background-color: #333366;
 }
 
 #navbarNavAltMarkup {
