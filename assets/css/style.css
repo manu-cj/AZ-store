@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.articles-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 45px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+#cart {
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  top: 59px;
+  right: 0;
+  text-align: center;
+  color: #e2e8f0;
+  z-index: 10;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.392);
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+}
+#cart table {
+  width: 450px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  min-height: 55vh;
+  font-size: small;
+}
+#cart table tr {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+#cart table tr td form .quantity {
+  width: 50%;
+}
+#cart table .table-footer {
+  display: flex;
+  justify-content: space-around;
+}
+#cart table .total {
+  display: flex;
+  flex-direction: row;
+}
+
+.total {
+  margin-top: 10%;
+}
+
+.deleteCartArticle {
+  background: none;
+  border: none;
+}
+.deleteCartArticle i {
+  color: tomato;
+}
+.deleteCartArticle i:hover {
+  color: rgb(208, 56, 29);
+  scale: 1.1;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  width: 148px;
+  height: 45px;
+  border: 1px solid #e2e8f0;
+  margin: auto;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: 0 0;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 300%;
+  height: 100%;
+  background: #0284c7;
+  z-index: -1;
+  transition: all 0.4s;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: left;
+}
+.button:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+.button:hover {
+  color: #000;
+  border: none;
+}
+
+body {
+  background: linear-gradient(360deg, #000000, #333366);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #main-wrapper {
+  width: 80%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 120px;
+  justify-content: space-around;
+}
+
+.shoe {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  font-size: 70px;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.nike {
+  display: flex;
+  font-size: 200px;
+  color: transparent;
+  text-shadow: 0 0 2px white;
+  color: #071933;
+  font-weight: bold;
+  right: 20px;
+}
+
+.nike2-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nike2-section p {
+  width: 40%;
+  color: white;
+  text-align: center;
+}
+.nike2-section strong {
+  color: rgb(14, 106, 210);
+}
+
+.nike2 {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.shoe1 {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  right: 240px;
+  top: 160px;
+}
+
+.one {
+  color: rgb(14, 106, 210);
+  display: inline;
+}
+
+.btn {
+  font-size: 10px;
+  width: 100px;
+  background: linear-gradient(to right, #4c71c0, #071933);
+}
+
+.navbar {
+  background-color: #172554;
+  border-bottom: solid 1px rgb(195, 195, 195);
+  border-top: solid 1px rgb(195, 195, 195);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: rgb(243, 238, 238);
+}
+
+.custom-text-color {
+  color: rgb(248, 248, 248);
+  margin-right: 400px;
+  margin-left: 100px;
+}
+
+.OurProduct {
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  margin-top: 40px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our {
+  margin-top: 15px;
+  color: rgb(14, 106, 210);
+}
+
+.container1 {
+  width: 80%;
+  height: 540px;
+  flex-direction: row;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.lastproducts {
+  height: 17rem;
+}
+
+.lpimg {
+  width: 50%;
+  height: 80%;
+}
+
+.products {
+  box-sizing: border-box;
+}
+
+.see-more-div {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 30px;
+}
+.see-more-div a {
+  text-decoration-line: none;
+  color: white;
+}
+.see-more-div a i {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.see-more-div a .fa-arrow-right {
+  animation: moveArrowright 5s forwards ease-in-out;
+  animation-iteration-count: infinite;
+}
+.see-more-div a .fa-arrow-left {
+  animation: moveArrowLeft 5s forwards ease-in-out;
+  animation-iteration-count: infinite;
+}
+.see-more-div a strong {
+  animation: changeColorSeeMore 5s forwards ease-out;
+  animation-iteration-count: infinite;
+  color: white;
+}
+
+@keyframes moveArrowright {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.35);
+    transform: scale(1.1) translateX(10px);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1) translateX(0);
+  }
+}
+@keyframes moveArrowLeft {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.35);
+    transform: scale(1.1) translateX(-10px);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1) translateX(0);
+  }
+}
+@keyframes changeColorSeeMore {
+  0% {
+    color: white;
+  }
+  30% {
+    color: rgb(14, 106, 210);
+  }
+  60% {
+    color: rgb(14, 106, 210);
+  }
+  100% {
+    color: white;
+  }
+}
+.feedback {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 30px;
+}
+.feedback i {
+  color: rgb(217, 170, 0);
+  margin-top: 10px;
+}
+.feedback .feedback-client {
+  width: 20%;
+  text-align: center;
+}
+.feedback .feedback-client img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: #333366;
+  font-family: "Ubuntu", sans-serif;
+}
+.down a {
+  text-decoration: none;
+  color: white;
+}
+.down a:visited {
+  color: white;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  border: none;
+  border-bottom: 1px rgba(255, 255, 255, 0.215) solid;
+  background-color: #333366;
+}
+
+#navbarNavAltMarkup {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#navbarNavAltMarkup .cart-icon {
+  margin-right: 15%;
+  margin-left: 5%;
+  color: #e2e8f0;
+}
+#navbarNavAltMarkup .cart-icon:hover {
+  cursor: pointer;
+}
+#navbarNavAltMarkup a:hover {
+  scale: 1.1;
+}/*# sourceMappingURL=style.css.map */

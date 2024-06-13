@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body{
+  min-height: 100vh;
+  width: 100%;
+}
+
+#cart {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  top: 59px;
+  right: 0;
+  text-align: center;
+  color: #e2e8f0;
+  z-index: 10;
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.392);
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  
+
+  table {
+
+    width: 450px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    min-height: 55vh;
+    font-size: small;
+   
+
+    tr {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      
+      td {
+        form {
+          .quantity {
+            width: 50%;
+          }
+        }
+      }
+      
+    }
+
+    .table-footer {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .total {
+      display: flex;
+      flex-direction: row;
+    }
+
+  }
+}
+
+// table,
+// tr,
+// td {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   font-size: 18px;
+//   gap: 50px;
+// }
+
+.total {
+  margin-top: 10%;
+}
+
+.deleteCartArticle {
+  background: none;
+  border: none;
+  i {
+    color: tomato;
+    &:hover {
+      color: rgb(208, 56, 29);
+      scale: 1.1;
+    }
+  }
+}
+
+
+
+.button {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  width: 148px;
+  height: 45px;
+  border: 1px solid #e2e8f0;
+  margin: auto;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: 0 0;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300%;
+    height: 100%;
+    background: #0284c7;
+    z-index: -1;
+    transition: all 0.4s;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: left;
+  }
+
+  &:hover::before {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  &:hover {
+    color: #000;
+    border: none;
+  }
+}
+
