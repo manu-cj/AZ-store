@@ -16,7 +16,7 @@
   </main>
 <section class="OurProduct">
   <span class="our">Our</span>
-  <p>last product</p>
+  <p>Last Product</p>
   <div class="container1">
     <?php
 

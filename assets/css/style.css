@@ -226,6 +226,7 @@ main #main-wrapper {
 }
 
 .our {
+  margin-top: 15px;
   color: rgb(14, 106, 210);
 }
 
@@ -306,15 +307,28 @@ main #main-wrapper {
     transform: scale(1) translateX(0);
   }
 }
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  border: none;
+  background-color: rgb(14, 106, 210);
+}
+
 #navbarNavAltMarkup {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 #navbarNavAltMarkup .cart-icon {
   margin-right: 15%;
+  margin-left: 5%;
   color: #e2e8f0;
 }
 #navbarNavAltMarkup .cart-icon:hover {
   cursor: pointer;
+}
+#navbarNavAltMarkup a:hover {
+  scale: 1.1;
 }/*# sourceMappingURL=style.css.map */
