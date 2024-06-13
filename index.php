@@ -53,18 +53,7 @@
       </div>
     </main>
 
-    <div class="OurProduct">
-      <span class="our">Our</span>
-      <p>last product</p>
-      <div class="container1">
-      <?php
-      
-      include("pages/lastproducts.php");
-     
-      ?>
-      </div>
-      
-    </div>
+    
     <?php
     session_start();
     $c = $_GET['c'];
