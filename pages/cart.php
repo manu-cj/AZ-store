@@ -111,6 +111,6 @@
         </tr>
       </table>
       <div>
-        <a href="?c=shipping-address" alt="shipping-address"><button>Purchase</button></a>
+        <a href="./pages/shippingAddress.php" alt="shipping-address"><button>Purchase</button></a>
       </div>
     </section>
