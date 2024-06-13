@@ -23,7 +23,6 @@
           <a class="nav-link active" aria-current="page" href="?c=home">Home</a>
           <a class="nav-link" href="?c=products">Products</a>
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          <a class="nav-link disabled" aria-disabled="true">Login</a>
         </div>
         <a class="cart-icon" href="?c=cart"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
@@ -36,25 +35,7 @@
   if ($c !== "cart") {
   
   ?>
-  <main>
-    <article id="main-wrapper">
-      <div class="shoe">
-        <p>
-          SHOE THE
-        </p>
-        <p>RIGHT <span class="one">ONE</span>.
-        </p>
-        <a href="?c=products"><button class="btn btn-primary btn-sm">See our store</button></a>
-      </div>
-      <div class="nike">
-        <img class="shoe1" src="shoe_one.png">
-        NIKE
-      </div>
-    
-
-    
-    </article>
-  </main>
+ 
     <?php
     }
   

@@ -1,14 +1,19 @@
-<!-- <main>
+<main>
+    <article id="main-wrapper">
       <div class="shoe">
-        SHOE THE
-        <br>
-        RIGHT ONE.
-        <button class="btn btn-primary">See our store</button>
+        <p>
+          SHOE THE
+        </p>
+        <p>RIGHT <span class="one">ONE</span>.
+        </p>
+        <a href="?c=products"><button class="btn btn-primary btn-sm">See our store</button></a>
       </div>
       <div class="nike">
+        <img class="shoe1" src="shoe_one.png">
         NIKE
       </div>
-    </main> -->
+    </article>
+  </main>
 <section class="OurProduct">
   <span class="our">Our</span>
   <p>last product</p>
