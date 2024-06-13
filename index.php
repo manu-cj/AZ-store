@@ -37,7 +37,8 @@
     </div>
   </div>
 </nav>
-  <main>
+</article>
+  <main class="container">
   <div class="shoe">
         <p>
           SHOE THE
@@ -51,6 +52,7 @@
         NIKE
       </div>
     </main>
+
     <div class="OurProduct">
       <span class="our">Our</span>
       last product
@@ -93,7 +95,7 @@
     }
 
     ?>
-  </main>
+  
 </body>
 
 </html>
