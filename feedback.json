@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "name": "Emily",
+      "feedback": "crocs for 4000 € AZ-store are really pro scam do not order here",
+      "picture": "assets/images/image-emily.jpg",
+      "rating" : 1
+    },
+    {
+      "id": 2,
+      "name": "Jennie",
+      "feedback": "These shoes are worth every penny. The quality is top-notch and they look fantastic.",
+      "picture": "assets/images/image-jennie.jpg",
+      "rating" : 5
+    },
+    {
+      "id": 3,
+      "name": "Thomas",
+      "feedback": "I've been searching for shoes like these for a long time. They fit perfectly and are very durable.",
+      "picture": "assets/images/image-thomas.jpg",
+      "rating" : 3
+    }
+  ]
+  
