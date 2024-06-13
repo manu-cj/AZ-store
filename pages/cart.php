@@ -110,7 +110,8 @@ function get_cart_total()
       <td></td>
     </tr>
   </table>
-  <div>
+
+  <div class>
     <a href="?c=shipping-address" alt="shipping-address"><button class="button">Purchase</button></a>
   </div>
-</section>
+  </section>

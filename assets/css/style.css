@@ -26,6 +26,11 @@
   text-decoration: none;
 }
 
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
 #cart {
   position: absolute;
   width: -moz-max-content;
@@ -203,10 +208,6 @@ main #main-wrapper {
   margin-left: 100px;
 }
 
-.cart {
-  margin-left: 300px;
-}
-
 .OurProduct {
   width: 100%;
   font-size: 20px;
@@ -302,6 +303,12 @@ main #main-wrapper {
     transform: scale(1) translateX(0);
   }
 }
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 .down {
   display: flex;
   flex-direction: row;
