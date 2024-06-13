@@ -122,6 +122,16 @@ body {
   background-color: #172554;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #main-wrapper {
+  width: 80%;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -130,6 +140,7 @@ body {
 }
 
 .shoe {
+  width: 80%;
   display: flex;
   flex-direction: column;
   font-size: 70px;
@@ -190,7 +201,7 @@ body {
 }
 
 .OurProduct {
-  width: 100%;
+  width: 80%;
   font-size: 20px;
   color: white;
   font-family: "Ubuntu", sans-serif;
