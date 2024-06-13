@@ -29,6 +29,13 @@
       </div>
     </div>
   </nav>
+  <?php
+    session_start();
+    $c = $_GET['c'];
+    $a = $_GET['a'] ?? null;
+  if ($c !== "cart") {
+  
+  ?>
   <main>
     <article id="main-wrapper">
       <div class="shoe">
@@ -49,9 +56,8 @@
     </article>
   </main>
     <?php
-    session_start();
-    $c = $_GET['c'];
-    $a = $_GET['a'] ?? null;
+    }
+  
 
     function getPath($page)
     {
