@@ -19,7 +19,7 @@ body{
     color: white;
     font-family: "Ubuntu", sans-serif;
     font-weight: bold;
-    margin-left: 40px;
+    margin-left: 10px;
     margin-top: 40px;
 }
 
@@ -30,7 +30,7 @@ body{
     text-shadow: 0 0 2px white; 
     color: #071933;
     font-weight: bold;
-    margin-right: 60px;
+    right: 20px;
 }
 .shoe1{
     position: absolute;
@@ -79,7 +79,7 @@ body{
     font-family: "Ubuntu", sans-serif;
     font-weight: bold;
     margin-top: 40px;
-    margin-left: 190px;
+    margin-left: 170px;
     flex-direction: column;
     display: flex;
 }
@@ -94,6 +94,22 @@ body{
     display: flex;
     gap: 20px;
     justify-content: flex-start;
-    margin-right: 40px;
+    margin-right: 130px;
+
+}
+
+.lastproducts{
+    height: 17rem;
+    
+
+}
+.lpimg{
+    width: 50%;
+    height: 80%;
+}
+
+.products{
+    box-sizing: border-box;
+   
 
 }

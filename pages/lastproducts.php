@@ -30,8 +30,8 @@ $lastproducts = [
 foreach ($lastproducts as $item) {
     ?>
   <div class="card lastproducts" style="width: 18rem;">
-  <img src="<?php echo $item["image_url"]; ?>" alt="">
-  <div class="card-body">
+  <img  src="<?php echo $item["image_url"]; ?>" alt="">
+  <div class="card-body products">
     <h5 class="card-title"><?php echo $item["product"]; ?></h5>
     <p class="card-text"><?php echo $item["price"]; ?>€</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
