@@ -3,6 +3,8 @@ $productsJson = file_get_contents('real_products.json');
 $products = json_decode($productsJson, true);
 
 
+
+
 if (isset($_GET['product']) && isset($_GET['price']) && isset($_GET['image_url']) && isset($_GET['id'])) {
   $id = $_GET['id'];
   $product = $_GET['product'];
@@ -34,6 +36,7 @@ if (isset($_SESSION['product-datas'])) {
 
 ?>
 <section class="articles-container">
+
 <?php
 foreach ($products as $key => $value) {
   echo '
@@ -47,5 +50,6 @@ foreach ($products as $key => $value) {
   </div>
     ';
 }
-?>
+
+    ?>
 </section>

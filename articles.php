@@ -1,5 +1,4 @@
 <?php
-
 $articles = [
     [
      "id"=> 1,
@@ -122,6 +121,9 @@ $articles = [
         "image_url"=> "./assets/images/shoe_one.png"
       ]
 ];
+
+// Obtenir les 5 derniers produits
+$lastFiveProducts = array_slice($articles, -5);
 
 foreach ($articles as $item) {
 ?>
