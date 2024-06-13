@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $valid = true;
 
     $country = filter_input(INPUT_POST, 'country', FILTER_SANITIZE_STRING);
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $firstname = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
     $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
     $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
     $gender = filter_input(INPUT_POST, 'gender', FILTER_SANITIZE_STRING);
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $checkPub = filter_input(INPUT_POST, 'checkPub', FILTER_SANITIZE_STRING);
     
     if(empty($country)){$valid = false;}
-    if(empty($name)){$valid = false;}
+    if(empty($firstname)){$valid = false;}
     if(empty($lastname)){$valid = false;}
     if(empty($address)){$valid = false;}
     if(empty($email)){$valid = false;}
@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<p class=\"error\">Invalid email</p>";
                     }
                     if(empty($country)){echo "<p class=\"error\">Country field is empty!</p>";}
-                    if(empty($name)){echo "<p class=\"error\">Name field is empty!</p>";}
+                    if(empty($firstname)){echo "<p class=\"error\">Name field is empty!</p>";}
                     if(empty($lastname)){echo "<p class=\"error\">First name field is empty!</p>";}
                     if(empty($address)){echo "<p class=\"error\">Address field is empty!</p>";}
                     if(empty($email)){echo "<p class=\"error\">Email field is empty!</p>";}
@@ -150,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h2>BILLING ADDRESS</h2>
             <hr>
             <?php
-            echo "<p class=\"payment-text\">$name $lastname</p>";
+            echo "<p class=\"payment-text\">$firstname $lastname</p>";
             echo "<p class=\"payment-text\">$address</p>";
             echo "<p class=\"payment-text\">$country</p>";
             if(!empty($phoneNumber)){
@@ -174,7 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="shopCard">
         <h2>ORDER SUMMARY</h2>
         <hr>
-        <p class="card-article"><?php echo get_cart_quantity(); ?> ARTICLE IN YOUR CART</p>
+        <p class="card-article"><?php echo get_cart_quantity(); ?> ARTICLE IN YOUR CART <i class="fa-solid fa-square-caret-up"></i></p>
     <?php
 
     if (isset($_SESSION['product-data'])) {
@@ -204,6 +204,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         function openList() {
             let table = document.querySelector(".card-table");
+            btn_article = <p class="card-article"><?php echo get_cart_quantity(); ?> ARTICLE IN YOUR CART <i class="fa-solid fa-square-caret-down"></i></p>
             table.style.visibility = table.style.visibility == "hidden" ? "visible" : "hidden";
             table.style.position = table.style.position == "absolute" ? "relative" : "absolute";
         }
@@ -229,7 +230,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<br>";
             echo "<h3>DELIVERY ADDRESS</h3>";
             echo "<hr>";
-            echo "<p class=\"payment-text\">$name $lastname</p>";
+            echo "<p class=\"payment-text\">$firstname $lastname</p>";
             echo "<p class=\"payment-text\">$address</p>";
             echo "<p class=\"payment-text\">$country</p>";
         }
