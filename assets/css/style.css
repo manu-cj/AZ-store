@@ -302,16 +302,20 @@ main #main-wrapper {
     transform: scale(1) translateX(0);
   }
 }
-footer {
+.down {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 40px;
   background-color: rgb(14, 106, 210);
   font-family: "Ubuntu", sans-serif;
 }
-footer nav a {
+.down a {
   text-decoration: none;
+  color: white;
+}
+.down a:visited {
   color: white;
 }
 
