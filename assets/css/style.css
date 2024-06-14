@@ -20,7 +20,7 @@
   margin-top: 30px;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .articles-container {
     width: 100%;
     display: flex;
@@ -34,7 +34,7 @@
     margin-top: 30px;
   }
   .articles-container form .card {
-    width: 25rem;
+    width: 30rem;
   }
 }
 * {
