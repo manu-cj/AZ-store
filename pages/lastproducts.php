@@ -8,7 +8,7 @@ for ($i=0; $i < 4; $i++) {
     ?>
       <form action="?c=add-to-cart&#<?php echo $lastproducts[$i]["product"]; ?>" method="post">
     <div class="card" style="width: 20rem;">
-    <img  src="<?php echo $lastproducts[$i]["image_url"]; ?>" alt="<?php echo $lastproducts[$i]["product"]; ?>" style="height:350px;">
+    <img class="imgcard" src="<?php echo $lastproducts[$i]["image_url"]; ?>" alt="<?php echo $lastproducts[$i]["product"]; ?>" style="height:350px;">
     <div class="card-body">
       <h5 class="card-title"><?php echo $lastproducts[$i]["product"]; ?></h5>
       <p class="card-text"><?php echo $lastproducts[$i]["price"]; ?>€</p>

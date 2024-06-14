@@ -4,6 +4,7 @@
 @import '_home';
 @import '_footer';
 @import '_404';
+@import '_responsive.scss';
 
 .navbar {
     width: 100%;
@@ -13,7 +14,9 @@
     border: none;
     border-bottom: 1px rgba(255, 255, 255, 0.215) solid;
     background-color: #333366;
+
 }
+
 .header-nav {
     width: 100%;
     display: flex;

@@ -9,7 +9,7 @@
         <a href="?c=products"><button class="btn btn-primary btn-sm">See our store</button></a>
       </div>
       <div class="nike">
-      <p>
+      <p class="container2">
         <img class="shoe1" src="shoe_one.png" >
        NIKE
       </p>
@@ -17,8 +17,11 @@
     </article>
   </main>
 <section class="OurProduct">
-  <span class="our">Our</span>
-  <p>Last Product</p>
+  
+  <p class="lproducts">
+    <span class="our">Our</span>
+    Last Products
+  </p>
   <div class="container1">
     <?php
 
