@@ -30,7 +30,7 @@ if ($_SESSION["Payment"] == true) {
         .eventSection {
             width: 40%;
             left: 30%;
-            top: 40%;
+            top: 10vh;
             background-color: rgb(0, 200, 0, 0.3);
             border-radius: 1em;
             text-align: center;
