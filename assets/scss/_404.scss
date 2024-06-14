@@ -1,0 +1,17 @@
+
+.error-page {
+    width: 100%;
+    height: 300px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    
+    a {
+        color: rgb(14, 106, 210);
+        font-size: large;
+        text-decoration-line: none;
+    }
+}
