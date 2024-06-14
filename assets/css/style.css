@@ -21,11 +21,31 @@
 }
 .articles-container form .card-product {
   width: 20rem;
+  border-radius: 5px;
 }
 .articles-container form .card-product .card-img-top-product {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   height: 350px;
 }
 
+@media (min-width: 319px) and (max-width: 768px) {
+  .articles-container {
+    margin-bottom: 50px;
+  }
+  .articles-container form .card-product {
+    width: 8rem !important;
+  }
+  .articles-container form .card-product .card-img-top-product {
+    height: 200px;
+  }
+  .articles-container form .card-body-product {
+    height: 150px;
+  }
+  .articles-container form .card-body-product h5 {
+    font-size: 80%;
+  }
+}
 .card {
   background-color: transparent;
 }
@@ -40,33 +60,6 @@
   background-color: rgb(68, 68, 232);
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-  .articles-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    row-gap: 45px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin-top: 200px;
-    margin-bottom: 50px;
-  }
-  .articles-container form .card-product {
-    width: 8rem;
-  }
-  .articles-container form .card-product .card-img-top-product {
-    height: 200px;
-  }
-  .articles-container form .card-body-product {
-    height: 150px;
-  }
-  .articles-container form .card-body-product h5 {
-    font-size: 80%;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -484,7 +477,7 @@ footer {
 }
 
 /* Using plain CSS */
-@media (min-width: 321px) and (max-width: 600px) {
+@media (min-width: 319px) and (max-width: 600px) {
   main {
     display: flex;
     flex-direction: column;
