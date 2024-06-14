@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/0e39d36e41.js" crossorigin="anonymous"></script>
+  <script defer type="module" src="assets/js/app.js"></script>
   <title>AZ_Store</title>
 </head>
 
@@ -100,13 +101,13 @@
 
     ?>
   </main>
-
+  <i class="fas fa-toggle-on fa-flip-vertical toggleTheme"></i>
   <footer class="down">
   
         <a href="?c=home">Home</a>
         <a href="?c=products">Products</a>
         <a href="?c=contact">Contact</a>
-
+        
 </footer>
 
 </body>
