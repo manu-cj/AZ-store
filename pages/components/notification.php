@@ -36,7 +36,13 @@ if ($_SESSION["Payment"] == true) {
             text-align: center;
 
             backdrop-filter: blur(5px);
+        }
 
+        @media only screen and (max-width: 720px) {
+            .eventSection {
+                width: 80%;
+                left: 10%;
+            }
         }
 
         /* .closeButton {
