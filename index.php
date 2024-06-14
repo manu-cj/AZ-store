@@ -25,6 +25,7 @@
         </div>
         <?php
         session_start();
+    include("pages/components/notification.php");
         if (!isset($_SESSION['activeCart'])) {
           $_SESSION['activeCart'] = false;
          }else {
