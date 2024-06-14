@@ -15,13 +15,35 @@ if ($_SESSION["Payment"] == true) {
             </p>
         </div>
 
-        <button id="closeButton" class="closeButton">Close</button>
+        <!-- <button id="closeButton" class="closeButton">Close</button> -->
         <script>
-            document.querySelector("#closeButton").addEventListener("click", function(e) {
+            // document.querySelector("#closeButton").addEventListener("click", function(e) {
+            //     document.querySelector("#eventSection").remove();
+            // })
+            setTimeout(function(e) {
                 document.querySelector("#eventSection").remove();
-            })
+            }, 5000)
         </script>
     </dialog>
+
+    <style>
+        .eventSection {
+            width: 40%;
+            left: 30%;
+            top: 40%;
+            background-color: rgb(0, 200, 0);
+            border-radius: 1em;
+            text-align: center;
+
+        }
+
+        /* .closeButton {
+            margin: 1%;
+            padding: 1%;
+            border-radius: 0.5em;
+            background-color: rgb(0, 0, 0, 0.1);
+        } */
+    </style>
 
 <?php
     $_SESSION["Payment"] = false;
