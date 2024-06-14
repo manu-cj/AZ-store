@@ -13,9 +13,7 @@
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <div class="header-nav">
-      <a class="navbar-brand spacer custom-text-color azstore" href="?c=home">AZ[store]</a>
-      </div>
+    <a class="navbar-brand spacer custom-text-color" href="?c=home">AZ[store]</a>
       <div id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="?c=home">Home</a>
