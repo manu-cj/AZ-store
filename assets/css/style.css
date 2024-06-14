@@ -20,6 +20,20 @@
   margin-top: 30px;
 }
 
+.card {
+  background-color: transparent;
+}
+.card .card-title {
+  color: white;
+}
+.card .card-text {
+  color: white;
+}
+.card .btn btn-primary {
+  color: white;
+  background-color: rgb(68, 68, 232);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -138,12 +152,17 @@ body {
 
 main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 main #main-wrapper {
   width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
 }
 
 .container {
@@ -162,12 +181,12 @@ main #main-wrapper {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   margin-left: 10px;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .nike {
   display: flex;
-  font-size: 200px;
+  font-size: 250px;
   color: transparent;
   text-shadow: 0 0 2px white;
   color: #071933;
@@ -200,10 +219,10 @@ main #main-wrapper {
 
 .shoe1 {
   position: absolute;
-  width: 380px;
-  height: 380px;
+  width: 420px;
+  height: 420px;
   right: 240px;
-  top: 160px;
+  top: 100px;
 }
 
 .one {
@@ -214,7 +233,7 @@ main #main-wrapper {
 .btn {
   font-size: 10px;
   width: 100px;
-  background: linear-gradient(to right, #4c71c0, #071933);
+  background: linear-gradient(to right, #3071ff, #071933);
 }
 
 .navbar {
@@ -368,6 +387,14 @@ main #main-wrapper {
 .feedback .feedback-client img {
   width: 60px;
   border-radius: 50%;
+}
+
+.azstore {
+  margin-right: 50px;
+}
+
+.contact {
+  margin-right: 330px;
 }
 
 footer {
