@@ -8,7 +8,15 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 200px;
+    form {
+        .card-product {
+            width: 20rem;
+            .card-img-top-product {
+                height: 350px;
+            }
+        }
+    }
 }
 
 .card{
@@ -35,10 +43,20 @@
         justify-content: center;
         align-content: center;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 200px;
+        margin-bottom: 50px;
         form {
-            .card {
-                width: 25rem;
+            .card-product {
+                width: 8rem;
+                .card-img-top-product {
+                    height: 200px;
+                }
+            }
+            .card-body-product {
+                height: 150px;
+                h5 {
+                    font-size: 80%;
+                }
             }
         }
     }
