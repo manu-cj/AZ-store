@@ -1,10 +1,10 @@
 <main>
     <article id="main-wrapper">
       <div class="shoe">
-        <p>
+        <p id="shoethe">
           SHOE THE
         </p>
-        <p>RIGHT <span class="one">ONE</span>.
+        <p id="right">RIGHT <span class="one">ONE</span>.
         </p>
         <a href="?c=products"><button class="btn btn-primary btn-sm">See our store</button></a>
       </div>
@@ -20,7 +20,7 @@
   
   <p class="lproducts">
     <span class="our">Our</span>
-    Last Products
+     Last Products
   </p>
   <div class="container1">
     <?php
