@@ -14,7 +14,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <div class="header-nav">
-      <a class="navbar-brand spacer custom-text-color" href="?c=home">AZ[store]</a>
+      <a class="navbar-brand spacer custom-text-color azstore" href="?c=home">AZ[store]</a>
       </div>
       <div id="navbarNavAltMarkup">
         <div class="navbar-nav">

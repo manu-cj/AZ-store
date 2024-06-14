@@ -1,0 +1,83 @@
+$breakpoint-tablet: 768px;
+$breakpoint-smartphone: 321px;
+$breakpoint-laptop: 1021px;
+
+
+/* Using plain CSS */
+@media (min-width: 321px ) and (max-width:600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        #main-wrapper {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+          
+        }
+    }
+    .shoe{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        font-size: 40px;
+        color: white;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+
+
+.container2 {
+    position: relative;
+    display: inline-block; 
+  }
+  
+  .nike {
+    position: relative;
+    z-index: 1; 
+    font-size: 120px;
+    color: transparent;
+    text-shadow: 0 0 2px white; 
+    color: #071933;
+    font-weight: bold;
+    right: 10px;
+
+  }
+  
+  .shoe1 {
+    position: absolute;
+    top: 0; 
+    left: 20px; 
+    z-index: 2; 
+    height: 200px;
+    width: 200px;
+  }
+  .container1{
+   overflow-x: scroll;
+   overflow-y: none;
+   width: 100%;
+   height: 400px;
+    gap: 20px;
+    row-gap: 45px;
+  }
+  .card{
+    width: 100px;
+    height: 100px;
+  }
+  .imgcard{
+    height: 60%;
+    width: 70%;
+  }
+}
+
+.lproducts{
+    font-size: 60px;
+    margin-right: 100px;
+}

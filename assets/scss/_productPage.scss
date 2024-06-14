@@ -11,6 +11,19 @@
     margin-top: 30px;
 }
 
+.card{
+    background-color: transparent;
+    .card-title {
+        color: white;
+    }
+    .card-text{
+        color: white;
+    }
+    .btn btn-primary{
+    color: white;
+    background-color: rgb(68, 68, 232);
+    }
+}
 @media (min-width: 481px) and (max-width: 768px) {
     .articles-container {
         width: 100%;

@@ -20,6 +20,20 @@
   margin-top: 30px;
 }
 
+.card {
+  background-color: transparent;
+}
+.card .card-title {
+  color: white;
+}
+.card .card-text {
+  color: white;
+}
+.card .btn btn-primary {
+  color: white;
+  background-color: rgb(68, 68, 232);
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
   .articles-container {
     width: 100%;
@@ -161,12 +175,17 @@ body {
 
 main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 main #main-wrapper {
   width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
 }
 
 .container {
@@ -185,12 +204,12 @@ main #main-wrapper {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   margin-left: 10px;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .nike {
   display: flex;
-  font-size: 200px;
+  font-size: 250px;
   color: transparent;
   text-shadow: 0 0 2px white;
   color: #071933;
@@ -223,10 +242,10 @@ main #main-wrapper {
 
 .shoe1 {
   position: absolute;
-  width: 380px;
-  height: 380px;
+  width: 420px;
+  height: 420px;
   right: 240px;
-  top: 160px;
+  top: 100px;
 }
 
 .one {
@@ -237,7 +256,7 @@ main #main-wrapper {
 .btn {
   font-size: 10px;
   width: 100px;
-  background: linear-gradient(to right, #4c71c0, #071933);
+  background: linear-gradient(to right, #3071ff, #071933);
 }
 
 .navbar {
@@ -270,8 +289,14 @@ main #main-wrapper {
 }
 
 .our {
-  margin-top: 15px;
   color: rgb(14, 106, 210);
+}
+
+.lproducts {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 1000px;
 }
 
 .container1 {
@@ -394,6 +419,14 @@ main #main-wrapper {
   border-radius: 50%;
 }
 
+.azstore {
+  margin-right: 50px;
+}
+
+.contact {
+  margin-right: 330px;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -431,6 +464,77 @@ footer {
   color: rgb(14, 106, 210);
   font-size: large;
   text-decoration-line: none;
+}
+
+/* Using plain CSS */
+@media (min-width: 321px) and (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main #main-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+  }
+  .shoe {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .container2 {
+    position: relative;
+    display: inline-block;
+  }
+  .nike {
+    position: relative;
+    z-index: 1;
+    font-size: 120px;
+    color: transparent;
+    text-shadow: 0 0 2px white;
+    color: #071933;
+    font-weight: bold;
+    right: 10px;
+  }
+  .shoe1 {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 2;
+    height: 200px;
+    width: 200px;
+  }
+  .container1 {
+    overflow-x: scroll;
+    overflow-y: none;
+    width: 100%;
+    height: 400px;
+    gap: 20px;
+    row-gap: 45px;
+  }
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+  .imgcard {
+    height: 60%;
+    width: 70%;
+  }
+}
+.lproducts {
+  font-size: 60px;
+  margin-right: 100px;
 }
 
 .navbar {

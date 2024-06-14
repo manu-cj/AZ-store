@@ -6,11 +6,17 @@ body{
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     #main-wrapper {
         width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+      
     }
 }
 
@@ -32,12 +38,12 @@ main {
     font-family: "Ubuntu", sans-serif;
     font-weight: bold;
     margin-left: 10px;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .nike{
     display: flex;
-    font-size: 200px;
+    font-size: 250px;
     color: transparent; 
     text-shadow: 0 0 2px white; 
     color: #071933;
@@ -68,10 +74,10 @@ main {
 }
 .shoe1{
     position: absolute;
-    width: 380px;
-    height: 380px;
+    width: 420px;
+    height: 420px;
     right: 240px;
-    top: 160px;
+    top: 100px;
   
 }
 .one{
@@ -81,7 +87,7 @@ main {
 .btn{
     font-size: 10px;
     width: 100px;
-    background: linear-gradient(to right, #4c71c0, #071933);
+    background: linear-gradient(to right, #3071ff, #071933);
 
     
 }
@@ -117,12 +123,20 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 
+
 .our{
-    margin-top: 15px;
     color: rgb(14, 106, 210);
+}
+
+.lproducts{
+margin-top: 30px;
+display: flex;
+justify-content: flex-start;
+margin-right: 1000px;
 }
 
 .container1{
@@ -261,4 +275,12 @@ main {
             border-radius: 50%;
         }
     }
+}
+
+.azstore{
+    margin-right: 50px;
+}
+
+.contact{
+    margin-right: 330px;
 }
