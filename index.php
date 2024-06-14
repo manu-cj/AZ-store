@@ -103,9 +103,8 @@
   <footer class="down">
   
         <a href="?c=home">Home</a>
-        <a href="#">About</a>
         <a href="?c=products">Products</a>
-        <a href="#">Contact</a>
+        <a href="?c=contact">Contact</a>
 
 </footer>
 
