@@ -17,7 +17,13 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 200px;
+}
+.articles-container form .card-product {
+  width: 20rem;
+}
+.articles-container form .card-product .card-img-top-product {
+  height: 350px;
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
@@ -31,10 +37,20 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 200px;
+    margin-bottom: 50px;
   }
-  .articles-container form .card {
-    width: 30rem;
+  .articles-container form .card-product {
+    width: 8rem;
+  }
+  .articles-container form .card-product .card-img-top-product {
+    height: 200px;
+  }
+  .articles-container form .card-body-product {
+    height: 150px;
+  }
+  .articles-container form .card-body-product h5 {
+    font-size: 80%;
   }
 }
 * {
@@ -440,6 +456,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-left: 5%;
 }
 
 #navbarNavAltMarkup {
@@ -494,7 +511,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 5px;
   }
   #navbarNavAltMarkup .navbar-nav .cart-icon {
     float: right;
