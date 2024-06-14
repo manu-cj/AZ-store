@@ -477,7 +477,7 @@ footer {
 }
 
 /* Using plain CSS */
-@media (min-width: 300px) and (max-width: 660px) {
+@media (min-width: 200px) and (max-width: 660px) {
   main {
     display: flex;
     flex-direction: column;
@@ -595,6 +595,10 @@ footer {
   .feedback .feedback-client {
     width: 100%;
     font-size: 20px;
+  }
+  .error-page {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (min-width: 660px) and (max-width: 1200px) {
@@ -722,6 +726,10 @@ footer {
   .feedback .feedback-client {
     width: 100%;
     font-size: 20px;
+  }
+  .error-page {
+    display: flex;
+    flex-direction: column;
   }
 }
 .navbar {
