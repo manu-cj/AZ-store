@@ -12,19 +12,18 @@
 
 <body>
   <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid justify-content-between">
-      <a class="navbar-brand spacer custom-text-color  azstore" href="?c=home">AZ[store]</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="container-fluid">
+      <div class="header-nav">
+      <a class="navbar-brand spacer custom-text-color azstore" href="?c=home">AZ[store]</a>
+      </div>
+      <div id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="?c=home">Home</a>
           <a class="nav-link" href="?c=products">Products</a>
-          <a class="nav-link contact" href="?c=contact">Contact</a>
-        </div>
-        <?php
+          <a class="nav-link" href="?c=contact">Contact</a>
+          <?php
         session_start();
+    include("pages/components/notification.php");
         if (!isset($_SESSION['activeCart'])) {
           $_SESSION['activeCart'] = false;
          }else {
@@ -41,6 +40,10 @@
         ?>
         <a class="cart-icon" href="?c=activeCart&cart=of"><i class="fa-solid fa-cart-shopping"></i></a>
         <?php } ?>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        </div>
       </div>
     </div>
   </nav>

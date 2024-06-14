@@ -24,3 +24,22 @@
     background-color: rgb(68, 68, 232);
     }
 }
+@media (min-width: 481px) and (max-width: 768px) {
+    .articles-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        row-gap: 45px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-top: 30px;
+        form {
+            .card {
+                width: 25rem;
+            }
+        }
+    }
+  }

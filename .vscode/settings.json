@@ -1,0 +1,20 @@
+{
+  "liveSassCompile.settings.autoprefix": [],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.includeItems": [
+    
+  ],
+  "liveSassCompile.settings.forceBaseDirectory": "",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "./assets/css/",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveServer.settings.multiRootWorkspaceName": "AZ-store",
+  "color-highlight.sass.includePaths": [
+
+  ]
+}

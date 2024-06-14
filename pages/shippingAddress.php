@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $valid = true;
 
     $country = filter_input(INPUT_POST, 'country', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $firstname = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $gender = filter_input(INPUT_POST, 'gender', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($country)) {
         $valid = false;
     }
-    if (empty($name)) {
+    if (empty($firstname)) {
         $valid = false;
     }
     if (empty($lastname)) {
@@ -116,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if (empty($country)) {
                             echo "<p class=\"error\">Country field is empty!</p>";
                         }
-                        if (empty($name)) {
+                        if (empty($firstname)) {
                             echo "<p class=\"error\">Name field is empty!</p>";
                         }
                         if (empty($lastname)) {
@@ -180,7 +180,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2>BILLING ADDRESS</h2>
                 <hr>
                 <?php
-                echo "<p class=\"payment-text\">$name $lastname</p>";
+                echo "<p class=\"payment-text\">$firstname $lastname</p>";
                 echo "<p class=\"payment-text\">$address</p>";
                 echo "<p class=\"payment-text\">$country</p>";
                 if (!empty($phoneNumber)) {
@@ -200,7 +200,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <script>
                     <?php
                     $test = $_SESSION['Payment'];
-                    echo "console.log(\"test : $test\");"
                     ?>
                     let btn_payement = document.querySelectorAll(".payment-button")
                     for (const x of btn_payement) {
@@ -293,11 +292,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "<br>";
                 echo "<h3>DELIVERY ADDRESS</h3>";
                 echo "<hr>";
-                echo "<p class=\"payment-text\">$name $lastname</p>";
+                echo "<p class=\"payment-text\">$firstname $lastname</p>";
                 echo "<p class=\"payment-text\">$address</p>";
                 echo "<p class=\"payment-text\">$country</p>";
             }
             ?>
+            <button class="cancel-button">CANCEL</button>
+            <script>
+                document.querySelector(".cancel-button").addEventListener('click', function(e) {
+                    window.location.href = "../?c=home"
+                })
+            </script>
         </div>
     </main>
     <footer>

@@ -63,7 +63,6 @@ header .caseNumberFalse {
 .shopCard {
   background-color: var(--background);
   border-radius: 0.1em;
-  height: -moz-min-content;
   height: min-content;
   margin-top: 3em;
 }
@@ -137,11 +136,17 @@ header .caseNumberFalse {
 .shopCard .card-table td.td-name {
   text-align: right;
 }
+.shopCard .cancel-button {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  height: 2.5em;
+  font-weight: 900;
+}
 
 form {
   display: flex;
   flex-direction: column;
-  height: -moz-min-content;
   height: min-content;
 }
 form .input {
@@ -263,4 +268,4 @@ h3 {
   main .input {
     width: 100%;
   }
-}/*# sourceMappingURL=shippingAddress.css.map */
+}

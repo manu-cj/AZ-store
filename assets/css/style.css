@@ -34,6 +34,23 @@
   background-color: rgb(68, 68, 232);
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+  .articles-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 45px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .articles-container form .card {
+    width: 25rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -47,17 +64,14 @@ body {
 
 #cart {
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-max-content;
   height: max-content;
   top: 59px;
   right: 0;
   text-align: center;
   color: #e2e8f0;
   z-index: 10;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   background-color: rgba(0, 0, 0, 0.392);
   border: 1px solid #e2e8f0;
   border-radius: 5px;
@@ -375,6 +389,7 @@ main #main-wrapper {
   align-items: center;
   color: white;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 .feedback i {
   color: rgb(217, 170, 0);
@@ -409,7 +424,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  background-color: #333366;
+  background-color: #000000;
   font-family: "Ubuntu", sans-serif;
 }
 .down a {
@@ -418,6 +433,22 @@ footer {
 }
 .down a:visited {
   color: white;
+}
+
+.error-page {
+  width: 100%;
+  height: 300px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.error-page a {
+  color: rgb(14, 106, 210);
+  font-size: large;
+  text-decoration-line: none;
 }
 
 .navbar {
@@ -430,19 +461,82 @@ footer {
   background-color: #333366;
 }
 
+.header-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 #navbarNavAltMarkup {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-#navbarNavAltMarkup .cart-icon {
-  margin-right: 15%;
+#navbarNavAltMarkup .navbar-nav {
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+}
+#navbarNavAltMarkup .navbar-nav .cart-icon {
+  float: right;
+  margin-right: 5%;
+  margin-top: 5%;
   margin-left: 5%;
   color: #e2e8f0;
 }
-#navbarNavAltMarkup .cart-icon:hover {
+#navbarNavAltMarkup .navbar-nav .cart-icon:hover {
   cursor: pointer;
 }
-#navbarNavAltMarkup a:hover {
+#navbarNavAltMarkup .navbar-nav a:hover {
   scale: 1.1;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    border: none;
+    border-bottom: 1px rgba(255, 255, 255, 0.215) solid;
+    background-color: #333366;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #navbarNavAltMarkup {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  #navbarNavAltMarkup .navbar-nav {
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  #navbarNavAltMarkup .navbar-nav .cart-icon {
+    float: right;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-left: 5%;
+    color: #e2e8f0;
+  }
+  #navbarNavAltMarkup .navbar-nav .cart-icon:hover {
+    cursor: pointer;
+  }
+  #navbarNavAltMarkup .navbar-nav a:hover {
+    scale: 1.1;
+  }
+  #navbarNavAltMarkup .navbar-nav .navbar-toggler {
+    float: right;
+  }
+}
