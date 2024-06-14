@@ -40,20 +40,6 @@
   background-color: rgb(68, 68, 232);
 }
 
-.card {
-  background-color: transparent;
-}
-.card .card-title {
-  color: white;
-}
-.card .card-text {
-  color: white;
-}
-.card .btn btn-primary {
-  color: white;
-  background-color: rgb(68, 68, 232);
-}
-
 @media (min-width: 481px) and (max-width: 768px) {
   .articles-container {
     width: 100%;
@@ -200,7 +186,7 @@ body {
   }
 }
 body {
-  background: linear-gradient(360deg, #000000, #333366);
+  background: linear-gradient(360deg, #ffffff, #4b4bd2);
 }
 
 main {
@@ -461,6 +447,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 9;
 }
 
 .down {
@@ -613,6 +600,15 @@ footer {
   scale: 1.1;
 }
 
+.toggleTheme {
+  position: fixed;
+  bottom: 30px;
+  left: 88%;
+  color: aquamarine;
+  z-index: 10;
+  font-size: 35px;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
   .navbar {
     width: 100%;
@@ -655,5 +651,6 @@ footer {
   }
   #navbarNavAltMarkup .navbar-nav .navbar-toggler {
     float: right;
+    margin-left: 5%;
   }
 }
