@@ -458,7 +458,7 @@ footer {
 }
 
 /* Using plain CSS */
-@media (min-width: 321px) and (max-width: 600px) {
+@media (min-width: 300px) and (max-width: 660px) {
   main {
     display: flex;
     flex-direction: column;
@@ -474,15 +474,24 @@ footer {
     margin-top: 60px;
   }
   .shoe {
-    width: 60%;
+    width: 90%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 40px;
     color: white;
     font-family: "Ubuntu", sans-serif;
     font-weight: bold;
-    margin-left: 10px;
-    margin-top: 20px;
+    margin-left: 20px;
+    margin-top: 60px;
+  }
+  .shoe #shoethe {
+    margin-left: 35px;
+  }
+  .shoe #right {
+    margin-left: 20px;
+  }
+  .shoe .btn-sm {
+    margin-left: 30px;
   }
   .container2 {
     position: relative;
@@ -513,6 +522,7 @@ footer {
     height: 400px;
     gap: 20px;
     row-gap: 45px;
+    justify-content: flex-start;
   }
   .card {
     width: 100px;
@@ -522,12 +532,55 @@ footer {
     height: 60%;
     width: 70%;
   }
+  .nike2 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  .lproducts {
+    font-size: 40px;
+    margin-right: 40px;
+  }
+  .lproducts .our {
+    margin-right: 10px;
+  }
+  .one {
+    margin-left: 15px;
+  }
+  .nike2-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nike2-section .nike2 {
+    width: 60%;
+  }
+  .nike2-section .shoe2 {
+    margin-bottom: 10px;
+  }
+  .nike2-section h2 {
+    width: 300px;
+  }
+  .nike2-section p {
+    width: 60%;
+    color: white;
+  }
+  .nike2-section strong {
+    color: rgb(14, 106, 210);
+  }
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .feedback .feedback-client {
+    width: 100%;
+    font-size: 20px;
+  }
 }
-.lproducts {
-  font-size: 60px;
-  margin-right: 100px;
-}
-
 .navbar {
   width: 100%;
   position: fixed;
