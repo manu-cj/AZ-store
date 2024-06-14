@@ -20,6 +20,23 @@
   margin-top: 30px;
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+  .articles-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 45px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .articles-container form .card {
+    width: 25rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -417,19 +434,82 @@ footer {
   background-color: #333366;
 }
 
+.header-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 #navbarNavAltMarkup {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-#navbarNavAltMarkup .cart-icon {
-  margin-right: 15%;
+#navbarNavAltMarkup .navbar-nav {
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+}
+#navbarNavAltMarkup .navbar-nav .cart-icon {
+  float: right;
+  margin-right: 5%;
+  margin-top: 5%;
   margin-left: 5%;
   color: #e2e8f0;
 }
-#navbarNavAltMarkup .cart-icon:hover {
+#navbarNavAltMarkup .navbar-nav .cart-icon:hover {
   cursor: pointer;
 }
-#navbarNavAltMarkup a:hover {
+#navbarNavAltMarkup .navbar-nav a:hover {
   scale: 1.1;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    border: none;
+    border-bottom: 1px rgba(255, 255, 255, 0.215) solid;
+    background-color: #333366;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #navbarNavAltMarkup {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  #navbarNavAltMarkup .navbar-nav {
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  #navbarNavAltMarkup .navbar-nav .cart-icon {
+    float: right;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-left: 5%;
+    color: #e2e8f0;
+  }
+  #navbarNavAltMarkup .navbar-nav .cart-icon:hover {
+    cursor: pointer;
+  }
+  #navbarNavAltMarkup .navbar-nav a:hover {
+    scale: 1.1;
+  }
+  #navbarNavAltMarkup .navbar-nav .navbar-toggler {
+    float: right;
+  }
 }
