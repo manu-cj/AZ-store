@@ -63,7 +63,6 @@ header .caseNumberFalse {
 .shopCard {
   background-color: var(--background);
   border-radius: 0.1em;
-  height: -moz-min-content;
   height: min-content;
   margin-top: 3em;
 }
@@ -141,7 +140,6 @@ header .caseNumberFalse {
 form {
   display: flex;
   flex-direction: column;
-  height: -moz-min-content;
   height: min-content;
 }
 form .input {
@@ -263,4 +261,4 @@ h3 {
   main .input {
     width: 100%;
   }
-}/*# sourceMappingURL=shippingAddress.css.map */
+}
