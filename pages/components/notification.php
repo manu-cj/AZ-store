@@ -31,10 +31,18 @@ if ($_SESSION["Payment"] == true) {
             width: 40%;
             left: 30%;
             top: 40%;
-            background-color: rgb(0, 200, 0);
+            background-color: rgb(0, 200, 0, 0.3);
             border-radius: 1em;
             text-align: center;
 
+            backdrop-filter: blur(5px);
+        }
+
+        @media only screen and (max-width: 720px) {
+            .eventSection {
+                width: 80%;
+                left: 10%;
+            }
         }
 
         /* .closeButton {
