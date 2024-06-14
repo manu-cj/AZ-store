@@ -9,8 +9,10 @@
         <a href="?c=products"><button class="btn btn-primary btn-sm">See our store</button></a>
       </div>
       <div class="nike">
+      <p>
         <img class="shoe1" src="shoe_one.png" >
-        <p>NIKE</p>
+       NIKE
+      </p>
       </div>
     </article>
   </main>
