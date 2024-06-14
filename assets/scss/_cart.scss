@@ -138,3 +138,17 @@ body{
   }
 }
 
+@media only screen and (max-width: 720px) {
+
+  tbody{
+    width: 85%;
+
+  }
+
+  #cart{
+    width: 100%;
+    top: 100px;
+    // margin-right: 2%;
+  }
+
+}
