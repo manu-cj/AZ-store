@@ -199,8 +199,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <script>
                     <?php
-                    $test = $_SESSION['Payment'];
-                    echo "console.log(\"test : $test\");"
+            $test = $_SESSION['Payment'];
                     ?>
                     let btn_payement = document.querySelectorAll(".payment-button")
                     for (const x of btn_payement) {
