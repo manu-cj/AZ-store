@@ -12,35 +12,47 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  column-gap: 20px;
   row-gap: 45px;
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 .articles-container form .card-product {
-  width: 20rem;
+  position: relative;
+  width: 18rem;
   border-radius: 5px;
 }
 .articles-container form .card-product .card-img-top-product {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  height: 350px;
+  height: 300px;
+}
+.articles-container form .card-product .btn {
+  position: absolute;
+  bottom: 0;
+}
+.articles-container form .card-product .card-body-product {
+  height: 90px;
 }
 
 @media (min-width: 319px) and (max-width: 768px) {
   .articles-container {
+    column-gap: 30px;
+    row-gap: 25px;
+    margin-top: 150px;
     margin-bottom: 50px;
   }
   .articles-container form .card-product {
     width: 8rem !important;
   }
   .articles-container form .card-product .card-img-top-product {
-    height: 200px;
+    height: 150px;
   }
   .articles-container form .card-body-product {
-    height: 150px;
+    height: 90px;
   }
   .articles-container form .card-body-product h5 {
     font-size: 80%;
@@ -179,7 +191,7 @@ body {
   }
 }
 body {
-  background: linear-gradient(360deg, #ffffff, #4b4bd2);
+  background: linear-gradient(360deg, #ffffff, #5e5edc);
 }
 
 main {
@@ -265,7 +277,17 @@ main #main-wrapper {
 .btn {
   font-size: 10px;
   width: 100px;
+  height: 30px;
+  box-shadow: none;
   background: linear-gradient(to right, #3071ff, #071933);
+  transition: background 2s ease-in, font-size 1s ease-in, width 1s ease-in, height 1s ease-in, box-shadow 1s ease-in;
+}
+.btn:hover {
+  background: linear-gradient(to right, #3f7cff, #174e9a);
+  font-size: 12px;
+  width: 110px;
+  height: 35px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .navbar {
@@ -299,6 +321,7 @@ main #main-wrapper {
 
 .our {
   color: rgb(14, 106, 210);
+  margin-right: 5px;
 }
 
 .lproducts {
@@ -781,10 +804,16 @@ footer {
 .toggleTheme {
   position: fixed;
   bottom: 30px;
-  left: 88%;
+  left: 92%;
   color: aquamarine;
   z-index: 10;
   font-size: 35px;
+  cursor: pointer;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .toggleTheme {
+    left: 88%;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 768px) {

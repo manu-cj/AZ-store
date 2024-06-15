@@ -9,9 +9,9 @@
     {
       "id": 2,
       "name": "Jennie",
-      "feedback": "These shoes are worth every penny. The quality is top-notch and they look fantastic.",
+      "feedback": "wow there is an easterEgg on a page called EasterEgg <a href=\"/EasterEgg\"></a>, it's amazing.",
       "picture": "assets/images/image-jennie.jpg",
-      "rating" : 5
+      "rating": 5
     },
     {
       "id": 3,

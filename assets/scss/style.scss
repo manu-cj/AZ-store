@@ -62,10 +62,14 @@
 .toggleTheme {
     position: fixed;
     bottom: 30px;
-    left: 88%;
+    left: 92%;
     color: aquamarine;
     z-index: 10;
     font-size: 35px;
+    cursor: pointer;
+    @media (min-width: 320px) and (max-width: 768px) {
+        left: 88%;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 768px) {

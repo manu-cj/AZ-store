@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 $productsJson = file_get_contents('real_products.json');
 $products = json_decode($productsJson, true);
 
@@ -18,6 +18,7 @@ if (isset($_POST['add-to-cart'])) {
   }
 
   $_SESSION['product-data'][] = $cartProduct;
-
-  header("LOCATION: ?c=products");
+  $_SESSION['in-cart'] = true;
+  ob_clean();
+  echo '<script>window.location.replace("?c=products&#'.$product.'");</script>';
 }

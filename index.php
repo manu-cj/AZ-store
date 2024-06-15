@@ -48,13 +48,14 @@
   </nav>
   <?php
 
-    $c = $_GET['c'];
-    $a = $_GET['a'] ?? null;
-   
+function sanityzeUrl($url) {
+  $url = strip_tags($url);
+  $url = trim($url);
+  $url = htmlspecialchars($url);
 
-
-
-
+  return $url;
+}
+    $c =sanityzeUrl($_GET['c']);
   ?>
  
     <?php
@@ -84,9 +85,6 @@
         break;
       case 'activeCart':
         getPath('controller/cartController');
-        break;
-      case 'not-display-cart':
-        getPath('controller/notDisplayCartController');
         break;
 
       case 'shipping-address':
