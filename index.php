@@ -91,6 +91,10 @@ function sanityzeUrl($url) {
         getPath('pages/shippingAddress');
         break;
 
+        case 'contact':
+          getPath('pages/contact');
+          break;
+
         // pour ajouter une page rajouter un case en suivant les exemples précèdents
       default:
         getPath('pages/404');
