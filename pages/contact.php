@@ -1,5 +1,4 @@
 <?php
-session_start();
 $errors = $_SESSION['errors'] ?? [];
 $form_data = $_SESSION['form_data'] ?? [];
 $success_message = $_SESSION['success'] ?? '';
@@ -18,19 +17,19 @@ unset($_SESSION['errors'], $_SESSION['form_data'], $_SESSION['success'], $_SESSI
         <?php if ($error_message) : ?>
             <div class="error"><?php echo $error_message; ?></div>
         <?php endif; ?>
-        <form action="process_contact_form.php" method="POST">
+        <form id="contact-form" action="?c=process-contact-form" method="POST">
             <h3>Contact Us</h3>
             <p>Please contact us if you have any problems or comments about our products.</p>
             <label class="form-group">
                 <input class="form-control" type="text" id="name" name="name" placeholder="Firstname" value="<?php echo htmlspecialchars($form_data['name'] ?? ''); ?>">
                 <span class="error" id="name_error"><?php echo $errors['name'] ?? ''; ?></span>
-                <span class="border"></span>
+
             </label>
 
             <label class="form-group">
                 <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Lastname" value="<?php echo htmlspecialchars($form_data['lastname'] ?? ''); ?>">
                 <span class="error" id="lastname_error"><?php echo $errors['lastname'] ?? ''; ?></span>
-                <span class="border"></span>
+              
             </label>
 
             <label class="form-group">
@@ -41,19 +40,19 @@ unset($_SESSION['errors'], $_SESSION['form_data'], $_SESSION['success'], $_SESSI
                     <option value="other" <?php echo (isset($form_data['gender']) && $form_data['gender'] === 'other') ? 'selected' : ''; ?>>Other</option>
                 </select>
                 <span class="error" id="gender_error"><?php echo $errors['gender'] ?? ''; ?></span>
-                <span class="border"></span>
+              
             </label>
 
             <label class="form-group">
                 <input class="form-control" type="email" id="email" name="email" placeholder="Email" value="<?php echo htmlspecialchars($form_data['email'] ?? ''); ?>">
                 <span class="error" id="email_error"><?php echo $errors['email'] ?? ''; ?></span>
-                <span class="border"></span>
+              
             </label>
 
             <label class="form-group">
                 <input class="form-control" type="text" id="country" name="country" placeholder="Country" value="<?php echo htmlspecialchars($form_data['country'] ?? ''); ?>">
                 <span class="error" id="country_error"><?php echo $errors['country'] ?? ''; ?></span>
-                <span class="border"></span>
+              
             </label>
 
             <label class="form-group">
@@ -63,13 +62,13 @@ unset($_SESSION['errors'], $_SESSION['form_data'], $_SESSION['success'], $_SESSI
                     <option value="sales" <?php echo (isset($form_data['subject']) && $form_data['subject'] === 'sales') ? 'selected' : ''; ?>>Sales</option>
                     <option value="other" <?php echo (isset($form_data['subject']) && $form_data['subject'] === 'other') ? 'selected' : ''; ?>>Other</option>
                 </select>
-                <span class="border"></span>
+              
             </label>
 
             <label class="form-group">
                 <textarea class="form-control" id="message" name="message" placeholder="Message"><?php echo htmlspecialchars($form_data['message'] ?? ''); ?></textarea>
                 <span class="error" id="message_error"><?php echo $errors['message'] ?? ''; ?></span>
-                <span class="border"></span>
+              
             </label>
 
             <!-- Honeypot field for anti-spam -->
@@ -78,7 +77,7 @@ unset($_SESSION['errors'], $_SESSION['form_data'], $_SESSION['success'], $_SESSI
                 <input type="text" id="honeypot" name="honeypot">
             </div>
 
-            <button type="submit">Submit</button>
+            <button class="contact-submit" type="submit">Submit</button>
         </form>
     </div>
 </div>

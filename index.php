@@ -14,103 +14,110 @@
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-    <a class="navbar-brand spacer custom-text-color" href="?c=home">AZ[store]</a>
+      <a class="navbar-brand spacer custom-text-color" href="?c=home">AZ[store]</a>
       <div id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="?c=home">Home</a>
           <a class="nav-link" href="?c=products">Products</a>
           <a class="nav-link" href="?c=contact">Contact</a>
           <?php
-        session_start();
-    include("pages/components/notification.php");
-        if (!isset($_SESSION['activeCart'])) {
-          $_SESSION['activeCart'] = false;
-         }else {
-          if ($_SESSION['activeCart'] === true) {
-            include("pages/cart.php");
+          session_start();
+          include("pages/components/notification.php");
+          if (!isset($_SESSION['activeCart'])) {
+            $_SESSION['activeCart'] = false;
+          } else {
+            if ($_SESSION['activeCart'] === true) {
+              include("pages/cart.php");
+            }
           }
-         }
-        if ($_SESSION['activeCart'] === false) {
-        ?>
-        <a class="cart-icon" href="?c=activeCart&cart=on"><i class="fa-solid fa-cart-shopping"></i></a>
-        <?php } ?>
-        <?php
-        if ($_SESSION['activeCart'] === true) {
-        ?>
-        <a class="cart-icon" href="?c=activeCart&cart=of"><i class="fa-solid fa-cart-shopping"></i></a>
-        <?php } ?>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+          if ($_SESSION['activeCart'] === false) {
+          ?>
+            <a class="cart-icon" href="?c=activeCart&cart=on"><i class="fa-solid fa-cart-shopping"></i></a>
+          <?php } ?>
+          <?php
+          if ($_SESSION['activeCart'] === true) {
+          ?>
+            <a class="cart-icon" href="?c=activeCart&cart=of"><i class="fa-solid fa-cart-shopping"></i></a>
+          <?php } ?>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
       </div>
     </div>
   </nav>
   <?php
 
-function sanityzeUrl($url) {
-  $url = strip_tags($url);
-  $url = trim($url);
-  $url = htmlspecialchars($url);
+  print_r($url);
 
-  return $url;
-}
-    $c =sanityzeUrl($_GET['c']);
+  function sanityzeUrl($url)
+  {
+    $url = strip_tags($url);
+    $url = trim($url);
+    $url = htmlspecialchars($url);
+
+    return $url;
+  }
+  $c = sanityzeUrl($_GET['c']);
   ?>
- 
-    <?php
-    
-  
 
-    function getPath($page)
-    {
-      require __DIR__ . "/" . $page . ".php";
-    }
+  <?php
 
-    if (!isset($c)) {
-      header("LOCATION: ?c=home");
-    }
-    switch ($c) {
-      case 'home':
-        getPath('pages/home');
-        break;
-      case 'cart':
-        getPath('pages/cart');
-        break;
-      case 'products':
-        getPath('pages/products');
-        break;
-      case 'add-to-cart':
-        getPath('controller/addToCart');
-        break;
-      case 'activeCart':
-        getPath('controller/cartController');
-        break;
 
-      case 'shipping-address':
-        getPath('pages/shippingAddress');
-        break;
 
-        case 'contact':
-          getPath('pages/contact');
-          break;
+  function getPath($page)
+  {
+    require __DIR__ . "/" . $page . ".php";
+  }
 
-        // pour ajouter une page rajouter un case en suivant les exemples précèdents
-      default:
-        getPath('pages/404');
-        break;
-    }
+  if (!isset($c)) {
+    header("LOCATION: ?c=home");
+  }
+  switch ($c) {
+    case 'home':
+      getPath('pages/home');
+      break;
+    case 'cart':
+      getPath('pages/cart');
+      break;
+    case 'products':
+      getPath('pages/products');
+      break;
+    case 'add-to-cart':
+      getPath('controller/addToCart');
+      break;
+    case 'activeCart':
+      getPath('controller/cartController');
+      break;
 
-    ?>
+    case 'shipping-address':
+      getPath('pages/shippingAddress');
+      break;
+
+    case 'process-contact-form':
+      getPath('controller/process_contact_form');
+      break;
+
+    case 'contact':
+      getPath('pages/contact');
+      break;
+
+      // pour ajouter une page rajouter un case en suivant les exemples précèdents
+    default:
+      getPath('pages/404');
+      break;
+  }
+
+  ?>
   </main>
   <i class="fas fa-toggle-on fa-flip-vertical toggleTheme"></i>
   <footer class="down">
-  
-        <a href="?c=home">Home</a>
-        <a href="?c=products">Products</a>
-        <a href="?c=contact">Contact</a>
-        
-</footer>
+
+    <a href="?c=home">Home</a>
+    <a href="?c=products">Products</a>
+    <a href="?c=contact">Contact</a>
+
+  </footer>
 
 </body>
 

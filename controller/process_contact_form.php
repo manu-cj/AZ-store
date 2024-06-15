@@ -1,11 +1,10 @@
 <?php
-session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Honeypot check
     if (!empty($_POST['honeypot'])) {
         $_SESSION['errors'] = ['honeypot' => 'Spam detected!'];
-        header('Location: index.php');
+        header('Location: ?=home');
         exit;
     }
 

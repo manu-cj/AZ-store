@@ -755,6 +755,67 @@ footer {
     flex-direction: column;
   }
 }
+.wrapper #contact-form {
+  margin: 0 auto;
+  margin-top: 60px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 10px;
+}
+.wrapper #contact-form select {
+  cursor: pointer;
+}
+.wrapper h3, .wrapper p {
+  color: #e2e8f0;
+}
+.wrapper .contact-submit {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  width: 148px;
+  height: 45px;
+  border: 1px solid #e2e8f0;
+  margin: auto;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: 0 0;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s;
+}
+.wrapper .contact-submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 300%;
+  height: 100%;
+  background: #0284c7;
+  z-index: -1;
+  transition: all 0.4s;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: left;
+}
+.wrapper .contact-submit:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+.wrapper .contact-submit:hover {
+  color: #000;
+  border: none;
+}
+
 .navbar {
   width: 100%;
   position: fixed;
