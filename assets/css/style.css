@@ -758,21 +758,29 @@ footer {
 .wrapper #contact-form {
   margin: 0 auto;
   margin-top: 60px;
-  border: 1px solid red;
+  background-color: rgba(0, 0, 0, 0.0666666667);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50%;
   gap: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
-.wrapper #contact-form select {
+.wrapper #contact-form .form-group .form-control {
+  width: 200px;
+}
+.wrapper #contact-form .form-group select {
   cursor: pointer;
 }
 .wrapper #contact-form .error {
   color: rgb(190, 18, 60);
 }
-.wrapper h3, .wrapper p {
+.wrapper #contact-form h3,
+.wrapper #contact-form p {
   color: #e2e8f0;
 }
 .wrapper .contact-submit {
@@ -819,6 +827,15 @@ footer {
   border: none;
 }
 
+@media only screen and (max-width: 720px) {
+  #contact-form {
+    margin-top: 20px !important;
+    margin-bottom: 28px !important;
+    width: 90% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .navbar {
   width: 100%;
   position: fixed;

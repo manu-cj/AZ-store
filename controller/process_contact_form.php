@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars(trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS)));
     $lastname = htmlspecialchars(trim(filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_FULL_SPECIAL_CHARS)));
     $gender = htmlspecialchars(trim(filter_input(INPUT_POST, 'gender', FILTER_SANITIZE_FULL_SPECIAL_CHARS)));
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
     $country = htmlspecialchars(trim(filter_input(INPUT_POST, 'country', FILTER_SANITIZE_FULL_SPECIAL_CHARS)));
     $subject = htmlspecialchars(trim(filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_FULL_SPECIAL_CHARS)));
     $message = htmlspecialchars(trim(filter_input(INPUT_POST, 'message', FILTER_SANITIZE_FULL_SPECIAL_CHARS)));

@@ -37,14 +37,14 @@ unset($_SESSION['errors'], $_SESSION['form_data'], $_SESSION['success'], $_SESSI
                     <option value="">Gender</option>
                     <option value="male" <?php echo (isset($form_data['gender']) && $form_data['gender'] === 'male') ? 'selected' : ''; ?>>Male</option>
                     <option value="female" <?php echo (isset($form_data['gender']) && $form_data['gender'] === 'female') ? 'selected' : ''; ?>>Female</option>
-                    <option value="other" <?php echo (isset($form_data['gender']) && $form_data['gender'] === 'other') ? 'selected' : ''; ?>>Other</option>
+                    <option value="other" <?php echo (isset($form_data['gender']) && $form_data['gender'] === 'other') ? 'selected' : ''; ?>>Hélicopter de combat</option>
                 </select>
                 <span class="error" id="gender_error"><?php echo $errors['gender'] ?? ''; ?></span>
               
             </label>
 
             <label class="form-group">
-                <input class="form-control" type="email" id="email" name="email" placeholder="Email" value="<?php echo htmlspecialchars($form_data['email'] ?? ''); ?>">
+                <input class="form-control" type="text" id="email" name="email" placeholder="Email" value="<?php echo htmlspecialchars($form_data['email'] ?? ''); ?>">
                 <span class="error" id="email_error"><?php echo $errors['email'] ?? ''; ?></span>
               
             </label>
