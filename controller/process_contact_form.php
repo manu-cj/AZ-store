@@ -46,9 +46,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($errors)) {
         $_SESSION['errors'] = $errors;
         $_SESSION['form_data'] = $_POST;
-        header('Location: ?c=home');
+        header('Location: ?c=contact');
         exit;
     }
+
+    $_SESSION["mail"] = true;
+
+    header('Location: ?c=home');
 
     exit;
 }

@@ -769,6 +769,9 @@ footer {
 .wrapper #contact-form select {
   cursor: pointer;
 }
+.wrapper #contact-form .error {
+  color: rgb(190, 18, 60);
+}
 .wrapper h3, .wrapper p {
   color: #e2e8f0;
 }

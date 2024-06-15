@@ -89,19 +89,15 @@
     case 'activeCart':
       getPath('controller/cartController');
       break;
-
     case 'shipping-address':
       getPath('pages/shippingAddress');
       break;
-
     case 'process-contact-form':
       getPath('controller/process_contact_form');
       break;
-
     case 'contact':
       getPath('pages/contact');
       break;
-
       // pour ajouter une page rajouter un case en suivant les exemples précèdents
     default:
       getPath('pages/404');
