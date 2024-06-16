@@ -116,9 +116,22 @@ main {
     margin-left: 100px;
   }
 
-// .cart{
-//     margin-left: 300px;
-// }
+
+.cart{
+    width: 20rem;
+    border: none;
+    border-radius: 5px;
+ }
+ .imgcard {
+    height:350px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+ }
+ .card-body {
+    border: none;
+ }
+ 
+
 
 .OurProduct{
     width: 100%;
@@ -156,7 +169,8 @@ margin-right: 1000px;
     gap: 20px;
     justify-content: center;
     align-items: center;
-
+    border-radius: 5px;
+    border: none;
 }
 
 .lastproducts{

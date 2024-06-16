@@ -6,10 +6,12 @@ $breakpoint-laptop: 1021px;
 /* Using plain CSS */
 @media (min-width: 200px ) and (max-width:660px) {
     main {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
         #main-wrapper {
             width: 80%;
             display: flex;
@@ -42,7 +44,15 @@ $breakpoint-laptop: 1021px;
       
     }
 
-
+.OurProduct {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: baseline;
+    overflow: hidden;
+}
 
 .container2 {
     position: relative;
@@ -69,20 +79,23 @@ $breakpoint-laptop: 1021px;
     height: 200px;
     width: 200px;
   }
-  .container1{
-   overflow-x: scroll;
-   width: 100%;
-   height: 400px;
-   justify-content: flex-start;
+  .container1 {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    overflow-x: scroll;
   }
+  
   .card{
-    width: 90px;
-    height: 90px;
+    width: 15rem;
+    height: 100%;
   }
   .imgcard{
-    height: 60%;
-    width: 70%;
+    height: 200px;
+    width: 100%;
   }
+
   .nike2 {
     width: 20%;
     display: flex;
@@ -109,6 +122,7 @@ $breakpoint-laptop: 1021px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
         .nike2{
             width: 60%;
         }
@@ -134,7 +148,7 @@ $breakpoint-laptop: 1021px;
         flex-direction: column;
         width: 100%;
         .feedback-client{
-            width: 100%;
+            width: 90%;
             font-size: 20px;
         }
     }
@@ -209,25 +223,55 @@ $breakpoint-laptop: 1021px;
     height: 200px;
     width: 200px;
   }
-  .container1{
-    width: 80%;
-    height: 540px;
-    flex-direction: row;
-    display: flex;
-    gap:0px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+  .container1 {
     overflow-x: scroll;
+    overflow-y: hidden;
+    width: 90%;
+    height: 400px;
+   
+    margin: 30px;
 
+    /* Style de la scrollbar */
+    &::-webkit-scrollbar {
+        width: 12px; /* Largeur pour les barres verticales */
+        height: 12px; /* Hauteur pour les barres horizontales */
+    }
+
+    /* Style du pouce (la partie qui se déplace) */
+    &::-webkit-scrollbar-thumb {
+        background: #0247be; /* Couleur de base */
+        border-radius: 16px; /* Coins arrondis */
+    }
+
+    /* Style du pouce au survol */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #55555500; /* Couleur au survol */
+    }
+
+    /* Style de la piste de défilement */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f100; /* Couleur de fond */
+        border-radius: 16px; /* Coins arrondis */
+    }
+
+    /* Style des coins (pour les barres horizontale et verticale combinées) */
+    &::-webkit-scrollbar-corner {
+        background: #f1f1f100;
+    }
+
+    /* Firefox */
+    scrollbar-color: #268bbd #f1f1f100; /* Couleur du pouce et de la piste */
+    scrollbar-width: thin; /* Largeur de la scrollbar (thin, auto, none) */
 }
+
+
   .card{
-    width: 100px;
-    height: 100px;
+    width: 18rem;
+    height: 100%;
   }
   .imgcard{
-    height: 60%;
-    width: 70%;
+    height: 250px;
+    width: 100%;
   }
   .nike2 {
     width: 20%;

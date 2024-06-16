@@ -4,6 +4,7 @@ const darkmode = () => {
     let nike2Section = document.querySelector('.nike2-section');
     let p = '';
     let feedback ='';
+    console.log('hello');
     if (body.contains(nike2Section)) {
         p = nike2Section.querySelector('p');
         feedback = document.querySelector('.feedback');
@@ -63,6 +64,7 @@ const darkmode = () => {
     }
   
     toggleTheme.addEventListener('click', () => {
+        console.log('click');
       if (document.documentElement.getAttribute('data-theme') === 'dark') {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
