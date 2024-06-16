@@ -713,12 +713,21 @@ footer {
     height: 200px;
     width: 200px;
   }
+  .OurProduct {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: baseline;
+    overflow: hidden;
+  }
   .container1 {
-    overflow-x: scroll;
-    overflow-y: hidden;
     width: 90%;
-    height: 400px;
-    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    overflow-x: scroll;
     /* Style de la scrollbar */
     /* Style du pouce (la partie qui se déplace) */
     /* Style du pouce au survol */
