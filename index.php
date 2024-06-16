@@ -70,7 +70,7 @@
     require __DIR__ . "/" . $page . ".php";
   }
 
-  if (!isset($c)) {
+  if (!isset($c) || $_GET['']) {
     header("LOCATION: ?c=home");
   }
   switch ($c) {
