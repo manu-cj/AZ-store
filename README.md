@@ -18,9 +18,6 @@ La page de paiement (elle doit afficher les produits dans le panier).
 La page de paiement doit avoir un formulaire pour donner des informations sur l'expédition
 La page de paiement doit avoir un bouton, après avoir soumis le formulaire, affichez simplement un message "Merci pour votre commande" et videz le panier.
 
-### Note du pm
-
-#### Globalement tout c'est plutôt bien passé, l'équipe à fait du très bon boulot et chaque membres à très bien pris conscience de mes remarques, même si il y en avait peu en vérité car je n'avais pas trop à me plaindre du travail effectué. Etant donné que nous avions de l'avance je me suis même permis de demander à ce qu'on rajoute une page de contact
 ### répartition des tâches
 #### Nathanael
 - C'est occupé de la page shippingAdress, il c'est donc chargé du formulaire de coordonnée, des vérifications des données envoyé par l'utilisateur ainsi que le sass et du responsive de sa page, Nathanael c'est aussi occupé de l'easterEgg.
@@ -30,6 +27,11 @@ La page de paiement doit avoir un bouton, après avoir soumis le formulaire, aff
 - Giovanni c'est lui occupé de la page d'acceuil du site ainsi que le sass et le responsive de celle ci.
 #### Manu
 - Je me suis occupé de la page product du site sur lequel j'ai afficher les articles j'ai aussi fait le sass et le responsive de cette page, je me suis aussi chargé de créer un routeur pour caché le chemin du repertoire dans l'url, ainsi que l'ajout d'une fonction pour gérer le thème couleur de l'application, en tant que project manager j'ai aussi dirigé le groupe en le donnant la direction à prendre et en leurs donnant mon feedback sur les tâches réalisées afin de les optimiser au mieux.
+
+
+### Note du pm
+
+#### Globalement tout c'est plutôt bien passé, l'équipe à fait du très bon boulot et chaque membres à très bien pris conscience de mes remarques, même si il y en avait peu en vérité car je n'avais pas trop à me plaindre du travail effectué. Etant donné que nous avions de l'avance je me suis même permis de demander à ce qu'on rajoute une page de contact
 
 ### Aperçu de l'application
 #### Home page
